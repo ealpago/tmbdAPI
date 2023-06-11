@@ -101,10 +101,11 @@
 		D1074D7C2A36093300906579 /* tmbdAPI */ = {
 			isa = PBXGroup;
 			children = (
+				D1074DB12A3609C400906579 /* Models */,
+				D1074DB02A3609AF00906579 /* Services */,
+				D1074DB22A3609CA00906579 /* Controllers */,
 				D1074D7D2A36093300906579 /* AppDelegate.swift */,
 				D1074D7F2A36093300906579 /* SceneDelegate.swift */,
-				D1074D812A36093300906579 /* ViewController.swift */,
-				D1074D832A36093400906579 /* Main.storyboard */,
 				D1074D892A36093500906579 /* Assets.xcassets */,
 				D1074D8B2A36093500906579 /* LaunchScreen.storyboard */,
 				D1074D8E2A36093500906579 /* Info.plist */,
@@ -128,6 +129,77 @@
 				D1074DA32A36093500906579 /* tmbdAPIUITestsLaunchTests.swift */,
 			);
 			path = tmbdAPIUITests;
+			sourceTree = "<group>";
+		};
+		D1074DB02A3609AF00906579 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D1074DB12A3609C400906579 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1074DB22A3609CA00906579 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1074DB82A360A7500906579 /* FavoriteMovies */,
+				D1074DB72A360A6D00906579 /* DownloadsMovies */,
+				D1074DB62A360A6000906579 /* HomeMovies */,
+				D1074DB52A360A5400906579 /* MoviesDetail */,
+				D1074DB42A360A3700906579 /* SearchMoview */,
+				D1074DB32A3609F400906579 /* BaseTabbar */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D1074DB32A3609F400906579 /* BaseTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				D1074D812A36093300906579 /* ViewController.swift */,
+				D1074D832A36093400906579 /* Main.storyboard */,
+			);
+			path = BaseTabbar;
+			sourceTree = "<group>";
+		};
+		D1074DB42A360A3700906579 /* SearchMoview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchMoview;
+			sourceTree = "<group>";
+		};
+		D1074DB52A360A5400906579 /* MoviesDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MoviesDetail;
+			sourceTree = "<group>";
+		};
+		D1074DB62A360A6000906579 /* HomeMovies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeMovies;
+			sourceTree = "<group>";
+		};
+		D1074DB72A360A6D00906579 /* DownloadsMovies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DownloadsMovies;
+			sourceTree = "<group>";
+		};
+		D1074DB82A360A7500906579 /* FavoriteMovies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteMovies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
