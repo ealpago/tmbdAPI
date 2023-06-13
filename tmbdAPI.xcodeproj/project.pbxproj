@@ -29,6 +29,9 @@
 		D1074DCC2A38FFDD00906579 /* UpcomingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1074DCB2A38FFDD00906579 /* UpcomingStoryboard.storyboard */; };
 		D1074DCF2A38FFE900906579 /* FavoritesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1074DCE2A38FFE900906579 /* FavoritesStoryboard.storyboard */; };
 		D1074DD12A38FFF200906579 /* DetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1074DD02A38FFF200906579 /* DetailsStoryboard.storyboard */; };
+		D1074DD52A390DA100906579 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1074DD42A390DA100906579 /* SearchViewController.swift */; };
+		D1074DD72A390DAC00906579 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1074DD62A390DAC00906579 /* SearchViewModel.swift */; };
+		D1074DD92A390DB800906579 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1074DD82A390DB800906579 /* SearchStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		D1074DCB2A38FFDD00906579 /* UpcomingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingStoryboard.storyboard; sourceTree = "<group>"; };
 		D1074DCE2A38FFE900906579 /* FavoritesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesStoryboard.storyboard; sourceTree = "<group>"; };
 		D1074DD02A38FFF200906579 /* DetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		D1074DD42A390DA100906579 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D1074DD62A390DAC00906579 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D1074DD82A390DB800906579 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				D1074DB62A360A6000906579 /* Home */,
-				D1074DB42A360A3700906579 /* UpcomingMovies */,
+				D1074DB42A360A3700906579 /* Upcoming */,
+				D1074DD32A390D8800906579 /* Search */,
 				D1074DB82A360A7500906579 /* Favorite */,
 				D1074DB52A360A5400906579 /* Detail */,
 				D1074DB32A3609F400906579 /* BaseTabbar */,
@@ -190,14 +197,14 @@
 			path = BaseTabbar;
 			sourceTree = "<group>";
 		};
-		D1074DB42A360A3700906579 /* UpcomingMovies */ = {
+		D1074DB42A360A3700906579 /* Upcoming */ = {
 			isa = PBXGroup;
 			children = (
 				D1074DB92A38F9AF00906579 /* UpcomingViewController.swift */,
 				D1074DBB2A38F9BB00906579 /* UpcomingViewModel.swift */,
 				D1074DCB2A38FFDD00906579 /* UpcomingStoryboard.storyboard */,
 			);
-			path = UpcomingMovies;
+			path = Upcoming;
 			sourceTree = "<group>";
 		};
 		D1074DB52A360A5400906579 /* Detail */ = {
@@ -228,6 +235,16 @@
 				D1074DCE2A38FFE900906579 /* FavoritesStoryboard.storyboard */,
 			);
 			path = Favorite;
+			sourceTree = "<group>";
+		};
+		D1074DD32A390D8800906579 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D1074DD42A390DA100906579 /* SearchViewController.swift */,
+				D1074DD62A390DAC00906579 /* SearchViewModel.swift */,
+				D1074DD82A390DB800906579 /* SearchStoryboard.storyboard */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1074DCC2A38FFDD00906579 /* UpcomingStoryboard.storyboard in Resources */,
+				D1074DD92A390DB800906579 /* SearchStoryboard.storyboard in Resources */,
 				D1074DCF2A38FFE900906579 /* FavoritesStoryboard.storyboard in Resources */,
 				D1074DD12A38FFF200906579 /* DetailsStoryboard.storyboard in Resources */,
 				D1074D8D2A36093500906579 /* LaunchScreen.storyboard in Resources */,
@@ -373,6 +391,8 @@
 				D1074DBA2A38F9AF00906579 /* UpcomingViewController.swift in Sources */,
 				D1074DC82A38FC5800906579 /* FavoritesViewModel.swift in Sources */,
 				D1074DC62A38FC4C00906579 /* FavoritesViewController.swift in Sources */,
+				D1074DD72A390DAC00906579 /* SearchViewModel.swift in Sources */,
+				D1074DD52A390DA100906579 /* SearchViewController.swift in Sources */,
 				D1074DC22A38FC2100906579 /* HomeViewController.swift in Sources */,
 				D1074D802A36093300906579 /* SceneDelegate.swift in Sources */,
 				D1074DBE2A38F9CD00906579 /* DetailsViewController.swift in Sources */,

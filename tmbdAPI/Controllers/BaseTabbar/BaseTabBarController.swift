@@ -12,32 +12,39 @@ enum TabBarConstant {
     static let homeStoryBoardID = "HomeViewController"
     static let upcomingStoryBoardName = "UpcomingStoryboard"
     static let upcomingStoryBoardID = "UpcomingViewController"
+    static let searchStoryBoardName = "SearchStoryboard"
+    static let searchStoryBoardID = "SearchViewController"
     static let favoritesStoryBoardName = "FavoritesStoryboard"
     static let favoritesStoryBoardID = "FavoritesViewController"
 }
 
 enum TabbarItemType {
-    case home, upcoming, favorites
+    case home, upcoming, search, favorites
 
     var name: String {
         switch self {
         case .home:
-            return "HomeStoryboard"
+            return TabBarConstant.homeStoryBoardName
         case .upcoming:
-            return "UpcomingStoryboard"
+            return TabBarConstant.upcomingStoryBoardName
+        case .search:
+            return TabBarConstant.searchStoryBoardName
         case .favorites:
-            return "FavoritesStoryboard"
+            return TabBarConstant.favoritesStoryBoardName
+
         }
     }
 
     var identifier: String {
         switch self {
         case .home:
-            return "HomeViewController"
+            return TabBarConstant.homeStoryBoardID
         case .upcoming:
-            return "UpcomingViewController"
+            return TabBarConstant.upcomingStoryBoardID
+        case .search:
+            return TabBarConstant.searchStoryBoardID
         case .favorites:
-            return "FavoritesViewController"
+            return TabBarConstant.favoritesStoryBoardID
         }
     }
 
@@ -47,38 +54,56 @@ enum TabbarItemType {
             return UIImage(systemName: "tv.circle")!
         case .upcoming:
             return UIImage(systemName: "clock.badge.checkmark")!
+        case .search:
+            return UIImage(systemName: "magnifyingglass.circle")!
         case .favorites:
             return  UIImage(systemName: "star")!
         }
     }
+
     var selectedImage: UIImage {
         switch self {
         case .home:
             return UIImage(systemName: "tv.circle.fill")!
         case .upcoming:
             return UIImage(systemName: "clock.badge.checkmark.fill")!
+        case .search:
+            return UIImage(systemName: "magnifyingglass.circle.fill")!
         case .favorites:
             return  UIImage(systemName: "star.fill")!
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .home:
+            return "Ana Sayfa"
+        case .upcoming:
+            return "Çok Yakında"
+        case .search:
+            return "Arama"
+        case .favorites:
+            return "Favoriler"
         }
     }
 }
 
 final class BaseTabBarController: UITabBarController {
     var items: [TabbarItemType] {
-        [.home, .upcoming, .favorites]
+        [.home, .upcoming, .search ,.favorites]
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
-        UITabBar.appearance().backgroundColor = .white
-        UITabBar.appearance().tintColor = .black
+        UITabBar.appearance().backgroundColor = .black.withAlphaComponent(0.6)
+        UITabBar.appearance().tintColor = .white
     }
 
     func setupTabBar() {
         let views = items.compactMap { item in
             let vc = UIStoryboard(name: item.name, bundle: nil).instantiateViewController(withIdentifier: item.identifier)
-            let tabBarItem = UITabBarItem(title: nil,
+            let tabBarItem = UITabBarItem(title: item.title,
                                           image: item.image,
                                           selectedImage: item.selectedImage)
             vc.tabBarItem = tabBarItem
