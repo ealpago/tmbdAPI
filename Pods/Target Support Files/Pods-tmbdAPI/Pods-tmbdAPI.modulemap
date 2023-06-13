@@ -1,0 +1,6 @@
+framework module Pods_tmbdAPI {
+  umbrella header "Pods-tmbdAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}

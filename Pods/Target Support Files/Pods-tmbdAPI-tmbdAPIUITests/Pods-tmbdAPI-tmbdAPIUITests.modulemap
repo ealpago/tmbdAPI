@@ -1,0 +1,6 @@
+framework module Pods_tmbdAPI_tmbdAPIUITests {
+  umbrella header "Pods-tmbdAPI-tmbdAPIUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
