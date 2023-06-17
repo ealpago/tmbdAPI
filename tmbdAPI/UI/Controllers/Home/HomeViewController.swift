@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
         tableView.register(CollectionTableViewCell.nib, forCellReuseIdentifier: CollectionTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableHeaderView = HeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
     }
 }
 
@@ -32,7 +33,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return "Deneme"
     }
 
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         if let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as? CollectionTableViewCell {
             return cell
         }
