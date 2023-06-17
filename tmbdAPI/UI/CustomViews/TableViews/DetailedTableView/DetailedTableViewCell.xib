@@ -22,8 +22,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdM-Pj-RtM">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TGN-sb-C51">
-                                        <rect key="frame" x="10" y="0.0" width="60" height="80"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TGN-sb-C51">
+                                        <rect key="frame" x="10" y="1" width="60" height="78.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="6qf-5l-pIg"/>
                                             <constraint firstAttribute="height" constant="80" id="zAc-jm-xyX"/>
@@ -92,5 +92,6 @@
     </objects>
     <resources>
         <image name="arrowtriangle.forward.circle" catalog="system" width="128" height="123"/>
+        <image name="square.and.arrow.up.circle" catalog="system" width="128" height="123"/>
     </resources>
 </document>
