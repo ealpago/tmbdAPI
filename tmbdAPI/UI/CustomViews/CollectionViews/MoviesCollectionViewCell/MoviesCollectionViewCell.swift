@@ -9,9 +9,12 @@ import UIKit
 
 class MoviesCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet private weak var imageContainerView: UIView!
     @IBOutlet private weak var imageView: UIImageView!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.imageContainerView.layer.cornerRadius =  8
     }
 }
