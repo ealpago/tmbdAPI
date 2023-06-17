@@ -14,9 +14,36 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="h3d-UW-n5x">
+                                <rect key="frame" x="0.0" y="69" width="393" height="56"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="N47-Hv-pqc"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f57-aT-INf">
+                                <rect key="frame" x="0.0" y="135" width="393" height="717"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.11627998737121215" green="0.067300605614701622" blue="0.058555004251188085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="f57-aT-INf" secondAttribute="bottom" id="0TR-d4-Tyh"/>
+                            <constraint firstItem="h3d-UW-n5x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5Os-oy-dq4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f57-aT-INf" secondAttribute="trailing" id="6kd-WK-Kjj"/>
+                            <constraint firstItem="f57-aT-INf" firstAttribute="top" secondItem="h3d-UW-n5x" secondAttribute="bottom" constant="10" id="8gm-KG-Zye"/>
+                            <constraint firstItem="h3d-UW-n5x" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Jo7-qd-OQZ"/>
+                            <constraint firstItem="f57-aT-INf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ML2-yH-3tL"/>
+                            <constraint firstItem="h3d-UW-n5x" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="X0Z-DT-QCd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="h3d-UW-n5x" id="R18-mg-teJ"/>
+                        <outlet property="tableView" destination="f57-aT-INf" id="pHG-lR-xYc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
