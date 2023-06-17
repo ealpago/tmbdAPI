@@ -40,6 +40,9 @@
                                             <state key="normal" title="Filmler">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="moviesButtonTapped:" destination="-1" eventType="touchUpInside" id="xnY-za-bpb"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-ev-e0I">
                                             <rect key="frame" x="226" y="0.0" width="216" height="40"/>
@@ -50,6 +53,9 @@
                                             <state key="normal" title="Diziler">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="seriesButtonTapped:" destination="-1" eventType="touchUpInside" id="dIy-2u-9td"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
