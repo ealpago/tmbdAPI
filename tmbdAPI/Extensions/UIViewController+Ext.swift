@@ -2,12 +2,13 @@
 //  UIView+Ext.swift
 //  tmbdAPI
 //
-//  Created by Emre Alpago on 18.06.2023.
+//  Created by Emre Alpago on 17.06.2023.
 //
 
 import UIKit
 
-extension UIView {
+extension UIViewController {
+
     public static var bundle: Bundle {
         get {
             Bundle(for: self)

@@ -34,4 +34,10 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController{
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
