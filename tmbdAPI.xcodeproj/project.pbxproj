@@ -46,6 +46,7 @@
 		D1F048762A3E1109005D6965 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F048752A3E1109005D6965 /* HeaderView.xib */; };
 		D1F048782A3F4EE2005D6965 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F048772A3F4EE2005D6965 /* String+Ext.swift */; };
 		D1F0487A2A3F501C005D6965 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F048792A3F501C005D6965 /* UIView+Ext.swift */; };
+		D1F0487C2A40ED45005D6965 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0487B2A40ED44005D6965 /* NetworkServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		D1F048752A3E1109005D6965 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		D1F048772A3F4EE2005D6965 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		D1F048792A3F501C005D6965 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		D1F0487B2A40ED44005D6965 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		E3E427E0C7C4F22A5771A8B8 /* Pods-tmbdAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmbdAPITests.debug.xcconfig"; path = "Target Support Files/Pods-tmbdAPITests/Pods-tmbdAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +219,7 @@
 		D1074DB02A3609AF00906579 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D1F0487B2A40ED44005D6965 /* NetworkServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				D1F048632A3DF05B005D6965 /* CollectionTableViewCell.swift in Sources */,
 				D1074DC62A38FC4C00906579 /* FavoritesViewController.swift in Sources */,
 				D1F0487A2A3F501C005D6965 /* UIView+Ext.swift in Sources */,
+				D1F0487C2A40ED45005D6965 /* NetworkServices.swift in Sources */,
 				D1074DD72A390DAC00906579 /* SearchViewModel.swift in Sources */,
 				D1074DD52A390DA100906579 /* SearchViewController.swift in Sources */,
 				D1074DC22A38FC2100906579 /* HomeViewController.swift in Sources */,
