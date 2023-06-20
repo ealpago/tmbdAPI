@@ -9,8 +9,8 @@ import Foundation
 
 struct MovieKeywords: Codable {
 
-    let id: Int?
-    let keywords: [Keyword]?
+    var id: Int?
+    var keywords: [Keyword]?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"

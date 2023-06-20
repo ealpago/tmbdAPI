@@ -9,10 +9,10 @@ import Foundation
 
 struct TopRatedMovies: Codable {
 
-    let page: Int?
-    let results: [TopRatedMoviesResults]?
-    let totalPages: Int?
-    let totalResults: Int?
+    var page: Int?
+    var results: [TopRatedMoviesResults]?
+    var totalPages: Int?
+    var totalResults: Int?
 
 
     enum CodingKeys: String, CodingKey {

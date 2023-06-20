@@ -9,10 +9,10 @@ import Foundation
 
 struct PopularMovies: Codable {
 
-    let page: Int?
-    let results: [PopularMoviesResults]?
-    let totalPages: Int?
-    let totalResults: Int?
+    var page: Int?
+    var results: [PopularMoviesResults]?
+    var totalPages: Int?
+    var totalResults: Int?
 
     enum CodingKeys: String, CodingKey {
         case page = "page"

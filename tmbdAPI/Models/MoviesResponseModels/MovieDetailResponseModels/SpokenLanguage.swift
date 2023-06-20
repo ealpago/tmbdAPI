@@ -9,9 +9,9 @@ import Foundation
 
 struct SpokenLanguage: Codable {
 
-    let englishName: String?
-    let iso6391: String?
-    let name: String?
+    var englishName: String?
+    var iso6391: String?
+    var name: String?
 
     enum CodingKeys: String, CodingKey {
         case englishName = "english_name"

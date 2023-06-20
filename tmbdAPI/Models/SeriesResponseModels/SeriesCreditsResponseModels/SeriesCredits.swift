@@ -9,9 +9,9 @@ import Foundation
 
 struct SeriesCredits : Codable {
 
-    let cast : [SeriesCast]?
-    let crew : [SeriesCrew]?
-    let id : Int?
+    var cast : [SeriesCast]?
+    var crew : [SeriesCrew]?
+    var id : Int?
 
     enum CodingKeys: String, CodingKey {
         case cast = "cast"

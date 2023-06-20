@@ -8,13 +8,13 @@ import Foundation
 
 struct Season: Codable {
 
-    let airDate: String?
-    let episodeCount: Int?
-    let id: Int?
-    let name: String?
-    let overview: String?
-    let posterPath: String?
-    let seasonNumber: Int?
+    var airDate: String?
+    var episodeCount: Int?
+    var id: Int?
+    var name: String?
+    var overview: String?
+    var posterPath: String?
+    var seasonNumber: Int?
 
     enum CodingKeys: String, CodingKey {
         case airDate = "air_date"

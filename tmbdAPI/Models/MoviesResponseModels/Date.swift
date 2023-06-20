@@ -9,8 +9,8 @@ import Foundation
 
 struct Date: Codable {
 
-    let maximum: String?
-    let minimum: String?
+    var maximum: String?
+    var minimum: String?
 
     enum CodingKeys: String, CodingKey {
         case maximum = "maximum"

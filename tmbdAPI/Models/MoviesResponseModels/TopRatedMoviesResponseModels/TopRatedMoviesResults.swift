@@ -9,20 +9,20 @@ import Foundation
 
 struct TopRatedMoviesResults: Codable {
 
-    let adult : Bool?
-    let backdropPath : String?
-    let genreIds : [Int]?
-    let id : Int?
-    let originalLanguage : String?
-    let originalTitle : String?
-    let overview : String?
-    let popularity : Float?
-    let posterPath : String?
-    let releaseDate : String?
-    let title : String?
-    let video : Bool?
-    let voteAverage : Float?
-    let voteCount : Int?
+    var adult : Bool?
+    var backdropPath : String?
+    var genreIds : [Int]?
+    var id : Int?
+    var originalLanguage : String?
+    var originalTitle : String?
+    var overview : String?
+    var popularity : Float?
+    var posterPath : String?
+    var releaseDate : String?
+    var title : String?
+    var video : Bool?
+    var voteAverage : Float?
+    var voteCount : Int?
 
     enum CodingKeys: String, CodingKey {
         case adult = "adult"

@@ -8,11 +8,11 @@ import Foundation
 
 struct CreatedBy: Codable {
 
-    let creditId: String?
-    let gender: Int?
-    let id: Int?
-    let name: String?
-    let profilePath: String?
+    var creditId: String?
+    var gender: Int?
+    var id: Int?
+    var name: String?
+    var profilePath: String?
 
     enum CodingKeys: String, CodingKey {
         case creditId = "credit_id"

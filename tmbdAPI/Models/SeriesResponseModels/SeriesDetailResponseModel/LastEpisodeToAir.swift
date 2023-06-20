@@ -8,18 +8,18 @@ import Foundation
 
 struct LastEpisodeToAir: Codable {
 
-    let airDate: String?
-    let episodeNumber: Int?
-    let id: Int?
-    let name: String?
-    let overview: String?
-    let productionCode: String?
-    let runtime: Int?
-    let seasonNumber: Int?
-    let showId: Int?
-    let stillPath: String?
-    let voteAverage: Float?
-    let voteCount: Int?
+    var airDate: String?
+    var episodeNumber: Int?
+    var id: Int?
+    var name: String?
+    var overview: String?
+    var productionCode: String?
+    var runtime: Int?
+    var seasonNumber: Int?
+    var showId: Int?
+    var stillPath: String?
+    var voteAverage: Float?
+    var voteCount: Int?
 
     enum CodingKeys: String, CodingKey {
         case airDate = "air_date"

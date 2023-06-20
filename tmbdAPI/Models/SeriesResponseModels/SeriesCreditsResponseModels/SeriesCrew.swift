@@ -9,17 +9,17 @@ import Foundation
 
 struct SeriesCrew: Codable {
 
-    let adult: Bool?
-    let creditId: String?
-    let department: String?
-    let gender: Int?
-    let id: Int?
-    let job: String?
-    let knownForDepartment: String?
-    let name: String?
-    let originalName: String?
-    let popularity: Float?
-    let profilePath: String?
+    var adult: Bool?
+    var creditId: String?
+    var department: String?
+    var gender: Int?
+    var id: Int?
+    var job: String?
+    var knownForDepartment: String?
+    var name: String?
+    var originalName: String?
+    var popularity: Float?
+    var profilePath: String?
 
     enum CodingKeys: String, CodingKey {
         case adult = "adult"

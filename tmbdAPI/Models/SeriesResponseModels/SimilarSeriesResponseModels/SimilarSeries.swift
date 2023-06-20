@@ -9,10 +9,10 @@ import Foundation
 
 struct SimilarSeries: Codable {
 
-    let page: Int?
-    let results: [SimilarSeriesResults]?
-    let totalPages: Int?
-    let totalResults: Int?
+    var page: Int?
+    var results: [SimilarSeriesResults]?
+    var totalPages: Int?
+    var totalResults: Int?
 
     enum CodingKeys: String, CodingKey {
         case page = "page"

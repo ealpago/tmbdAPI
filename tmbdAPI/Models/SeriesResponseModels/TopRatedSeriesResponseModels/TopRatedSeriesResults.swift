@@ -9,19 +9,19 @@ import Foundation
 
 struct TopRatedSeriesResults: Codable {
 
-    let backdropPath: String?
-    let firstAirDate: String?
-    let genreIds: [Int]?
-    let id: Int?
-    let name: String?
-    let originCountry: [String]?
-    let originalLanguage: String?
-    let originalName: String?
-    let overview: String?
-    let popularity: Float?
-    let posterPath: String?
-    let voteAverage: Float?
-    let voteCount: Int?
+    var backdropPath: String?
+    var firstAirDate: String?
+    var genreIds: [Int]?
+    var id: Int?
+    var name: String?
+    var originCountry: [String]?
+    var originalLanguage: String?
+    var originalName: String?
+    var overview: String?
+    var popularity: Float?
+    var posterPath: String?
+    var voteAverage: Float?
+    var voteCount: Int?
 
     enum CodingKeys: String, CodingKey {
         case backdropPath = "backdrop_path"

@@ -8,10 +8,10 @@ import Foundation
 
 struct Network: Codable {
 
-    let id: Int?
-    let logoPath: String?
-    let name: String?
-    let originCountry: String?
+    var id: Int?
+    var logoPath: String?
+    var name: String?
+    var originCountry: String?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"

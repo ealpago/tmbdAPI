@@ -9,8 +9,8 @@ import Foundation
 
 struct SeriesKeywords: Codable {
 
-    let id: Int?
-    let results: [SeriesKeywordResults]?
+    var id: Int?
+    var results: [SeriesKeywordResults]?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"

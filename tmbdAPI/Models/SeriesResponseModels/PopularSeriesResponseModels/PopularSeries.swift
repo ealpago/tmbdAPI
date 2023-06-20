@@ -8,10 +8,10 @@ import Foundation
 
 struct PopularSeries : Codable {
 
-    let page : Int?
-    let results : [PopularSeriesResults]?
-    let totalPages : Int?
-    let totalResults : Int?
+    var page : Int?
+    var results : [PopularSeriesResults]?
+    var totalPages : Int?
+    var totalResults : Int?
 
     enum CodingKeys: String, CodingKey {
         case page = "page"

@@ -9,31 +9,31 @@ import Foundation
 
 struct MovieDetail: Codable {
 
-    let adult: Bool?
-    let backdropPath: String?
-    let belongsToCollection: String?
-    let budget: Int?
-    let genres: [Genre]?
-    let homepage: String?
-    let id: Int?
-    let imdbId: String?
-    let originalLanguage: String?
-    let originalTitle: String?
-    let overview: String?
-    let popularity: Float?
-    let posterPath: String?
-    let productionCompanies: [ProductionCompany]?
-    let productionCountries: [ProductionCountry]?
-    let releaseDate: String?
-    let revenue: Int?
-    let runtime: Int?
-    let spokenLanguages: [SpokenLanguage]?
-    let status: String?
-    let tagline: String?
-    let title: String?
-    let video: Bool?
-    let voteAverage: Float?
-    let voteCount: Int?
+    var adult: Bool?
+    var backdropPath: String?
+    var belongsToCollection: String?
+    var budget: Int?
+    var genres: [Genre]?
+    var homepage: String?
+    var id: Int?
+    var imdbId: String?
+    var originalLanguage: String?
+    var originalTitle: String?
+    var overview: String?
+    var popularity: Float?
+    var posterPath: String?
+    var productionCompanies: [ProductionCompany]?
+    var productionCountries: [ProductionCountry]?
+    var releaseDate: String?
+    var revenue: Int?
+    var runtime: Int?
+    var spokenLanguages: [SpokenLanguage]?
+    var status: String?
+    var tagline: String?
+    var title: String?
+    var video: Bool?
+    var voteAverage: Float?
+    var voteCount: Int?
 
     enum CodingKeys: String, CodingKey {
         case adult = "adult"

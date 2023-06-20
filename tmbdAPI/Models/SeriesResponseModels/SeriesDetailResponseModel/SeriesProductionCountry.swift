@@ -8,8 +8,8 @@ import Foundation
 
 struct SeriesProductionCountry: Codable {
 
-    let iso31661: String?
-    let name: String?
+    var iso31661: String?
+    var name: String?
 
     enum CodingKeys: String, CodingKey {
         case iso31661 = "iso_3166_1"

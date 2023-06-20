@@ -9,11 +9,11 @@ import Foundation
 
 struct UpcomingMovies: Codable {
 
-    let dates: Date?
-    let page: Int?
-    let results: [UpcomingMoviesResults]?
-    let totalPages: Int?
-    let totalResults: Int?
+    var dates: Date?
+    var page: Int?
+    var results: [UpcomingMoviesResults]?
+    var totalPages: Int?
+    var totalResults: Int?
 
 
     enum CodingKeys: String, CodingKey {

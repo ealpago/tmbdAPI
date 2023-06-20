@@ -9,18 +9,18 @@ import Foundation
 
 struct Cast: Codable {
 
-    let adult: Bool?
-    let castId: Int?
-    let character: String?
-    let creditId: String?
-    let gender: Int?
-    let id: Int?
-    let knownForDepartment: String?
-    let name: String?
-    let order: Int?
-    let originalName: String?
-    let popularity: Float?
-    let profilePath: String?
+    var adult: Bool?
+    var castId: Int?
+    var character: String?
+    var creditId: String?
+    var gender: Int?
+    var id: Int?
+    var knownForDepartment: String?
+    var name: String?
+    var order: Int?
+    var originalName: String?
+    var popularity: Float?
+    var profilePath: String?
 
     enum CodingKeys: String, CodingKey {
         case adult = "adult"
