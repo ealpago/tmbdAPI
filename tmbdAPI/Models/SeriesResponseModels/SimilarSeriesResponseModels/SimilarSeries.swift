@@ -1,5 +1,5 @@
 //
-//  TopRatedMovies.swift
+//  SimilarSeries.swift
 //  tmbdAPI
 //
 //  Created by Emre Alpago on 20.06.2023.
@@ -7,13 +7,12 @@
 
 import Foundation
 
-struct TopRatedMovies: Codable {
+struct SimilarSeries: Codable {
 
     let page: Int?
-    let results: [TopRatedMoviesResults]?
+    let results: [SimilarSeriesResults]?
     let totalPages: Int?
     let totalResults: Int?
-
 
     enum CodingKeys: String, CodingKey {
         case page = "page"
@@ -25,7 +24,7 @@ struct TopRatedMovies: Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         page = try values.decodeIfPresent(Int.self, forKey: .page)
-        results = try values.decodeIfPresent([TopRatedMoviesResults].self, forKey: .results)
+        results = try values.decodeIfPresent([SimilarSeriesResults].self, forKey: .results)
         totalPages = try values.decodeIfPresent(Int.self, forKey: .totalPages)
         totalResults = try values.decodeIfPresent(Int.self, forKey: .totalResults)
     }
