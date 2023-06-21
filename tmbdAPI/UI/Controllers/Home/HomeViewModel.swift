@@ -21,22 +21,46 @@ extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return HomeTableViewSection.allCases.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Deneme"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        let label = UILabel(frame: CGRect(x: 20, y: 0, width: tableView.frame.width - 32, height: 20))
+        view.addSubview(label)
+        label.textColor = .white
+        label.text = HomeTableViewSection.allCases[section].headerTitle
+        return view
     }
-
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as? CollectionTableViewCell {
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+enum HomeTableViewSection: CaseIterable {
+    case nowPlaying
+    case upcoming
+    case popular
+    case topRated
+
+    var headerTitle: String{
+        switch self {
+        case .nowPlaying:
+            return "Vizyonda"
+        case .upcoming:
+            return "Gelecek"
+        case .popular:
+            return "Popüler"
+        case .topRated:
+            return "En iyiler"
+        }
     }
 }
