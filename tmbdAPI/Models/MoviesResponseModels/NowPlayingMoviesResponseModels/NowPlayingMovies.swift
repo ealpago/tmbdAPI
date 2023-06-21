@@ -9,11 +9,11 @@ import Foundation
 
 struct NowPlayingMovies: Codable {
 
-    var dates : Date?
-    var page : Int?
-    var results : [NowPlayingMoviesResults]?
-    var totalPages : Int?
-    var totalResults : Int?
+    var dates: Date?
+    var page: Int?
+    var results: [NowPlayingMoviesResults]?
+    var totalPages: Int?
+    var totalResults: Int?
 
     enum CodingKeys: String, CodingKey {
         case dates

@@ -9,6 +9,26 @@ import UIKit
 
 class UpcomingViewModel: BaseViewModel {
     var selectedCell:()->() = {}
+
+    var collectionViewCellModelArray:[CellModel] = []
+    var collectionCellModelItemsArray:[CellModelItems] = []
+
+    func upcomingMovies(completion: @escaping()->()) {
+        NetworkManager.service.request(requestRoute: .upcomingMovies, responseModel: UpcomingMovies.self) { [weak self] details in
+
+            guard let result = details.results else {return}
+            guard let self = self else {return}
+
+            self.collectionCellModelItemsArray = result.compactMap { movies in
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteCount, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+            }
+
+            self.collectionViewCellModelArray.append(CellModel(items: self.collectionCellModelItemsArray))
+            print(self.collectionViewCellModelArray.count)
+            print(self.collectionCellModelItemsArray.count)
+            completion()
+        }
+    }
 }
 
 extension UpcomingViewModel: UITableViewDelegate, UITableViewDataSource {
@@ -18,12 +38,15 @@ extension UpcomingViewModel: UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
     }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return collectionCellModelItemsArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: DetailedTableViewCell.identifier, for: indexPath) as? DetailedTableViewCell {
+            let cellModel = collectionCellModelItemsArray[indexPath.row]
+            cell.setupCell(cellModel: cellModel)
             return cell
         }
         return UITableViewCell()

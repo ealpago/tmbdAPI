@@ -14,6 +14,11 @@ class UpcomingViewController: BaseViewController<UpcomingViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.setupTableView(with: tableView)
+        viewModel.upcomingMovies {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
         viewModel.selectedCell = {
             if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController{
                 self.navigationController?.pushViewController(vc, animated: true)

@@ -21,7 +21,7 @@ struct UpcomingMoviesResults: Codable {
     var releaseDate: String?
     var title: String?
     var video: Bool?
-    var voteAverage: Int?
+    var voteAverage: Float?
     var voteCount: Int?
 
     enum CodingKeys: String, CodingKey {
@@ -55,7 +55,7 @@ struct UpcomingMoviesResults: Codable {
         releaseDate = try values.decodeIfPresent(String.self, forKey: .releaseDate)
         title = try values.decodeIfPresent(String.self, forKey: .title)
         video = try values.decodeIfPresent(Bool.self, forKey: .video)
-        voteAverage = try values.decodeIfPresent(Int.self, forKey: .voteAverage)
+        voteAverage = try values.decodeIfPresent(Float.self, forKey: .voteAverage)
         voteCount = try values.decodeIfPresent(Int.self, forKey: .voteCount)
     }
 }

@@ -17,7 +17,7 @@ struct UpcomingMovies: Codable {
 
 
     enum CodingKeys: String, CodingKey {
-        case dates
+        case dates 
         case page = "page"
         case results = "results"
         case totalPages = "total_pages"
