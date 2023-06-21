@@ -13,6 +13,7 @@ class HomeViewController: BaseViewController<HomeViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitle(title: "Ana Sayfa")
         viewModel.setupTableView(with: tableView, view: view)
         viewModel.goToDetail = {
             if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
@@ -23,7 +24,7 @@ class HomeViewController: BaseViewController<HomeViewModel> {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        changeNavigationBar(navigationBackgroundColor: .darkerBrown, font: UIFont())
+//        changeNavigationBar(navigationBackgroundColor: .darkerBrown, font: UIFont())
     }
 
     override func setViewModel() {

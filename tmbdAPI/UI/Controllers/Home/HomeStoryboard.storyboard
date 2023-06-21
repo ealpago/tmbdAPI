@@ -34,13 +34,14 @@
                             <constraint firstItem="JsJ-gb-037" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lNa-Sp-yc1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jVN-u9-xnI"/>
                     <connections>
                         <outlet property="tableView" destination="JsJ-gb-037" id="E3R-o5-MgW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
         </scene>
     </scenes>
 </document>

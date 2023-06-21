@@ -23,9 +23,9 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var detailsStackView: UIStackView!
     @IBOutlet private weak var topDetailStackView: UIStackView!
-    @IBOutlet private weak var yearLabel: UILabel!
-    @IBOutlet private weak var countryLabel: UILabel!
-    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var yearLabelView: DetailInfoView!
+    @IBOutlet private weak var countryLabelView: DetailInfoView!
+    @IBOutlet private weak var timeLabelView: DetailInfoView!
     @IBOutlet private weak var categoriesDetailStackView: UIStackView!
     @IBOutlet private weak var firstCategoryLabel: UILabel!
     @IBOutlet private weak var secondCategoryLabel: UILabel!
@@ -36,9 +36,18 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitle(title: "DR. Strange")
+        setupUI()
     }
 
     override func setViewModel() {
         viewModel = DetailViewModel()
+    }
+
+    func setupUI() {
+        previewStackView.layer.cornerRadius = 8
+        previewStackView.layer.borderColor = UIColor.brown.cgColor
+        previewStackView.layer.borderWidth = 2
+        yearLabelView.title = "2013"
     }
 }

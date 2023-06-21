@@ -21,7 +21,7 @@ open class BaseViewController<T:BaseViewModel>: UIViewController, BaseViewModelP
 
     }
 
-    func setTitle(title:String = "", backVisible:Bool = true, font: UIFont = UIFont(name: "HelveticaNeue-Bold", size: 12.0)!, navigationBackgrounColor: UIColor = .darkerBrown ) {
+    func setTitle(title:String = "", backVisible:Bool = true, font: UIFont = UIFont(name: "HelveticaNeue-Bold", size: 14.0)!, navigationBackgrounColor: UIColor = .darkerBrown ) {
         navigationItem.title = title
         navigationItem.hidesBackButton = true
 
