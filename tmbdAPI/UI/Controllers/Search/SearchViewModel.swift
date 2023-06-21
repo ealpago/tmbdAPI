@@ -11,6 +11,9 @@ class SearchViewModel: BaseViewModel {
 
     var selectedCell:()->() = {}
 
+    var deneme: [PopularMoviesResults] = []
+    var searchedList: [SearchedMoviesResults] = []
+
     var collectionViewCellModelArray:[CellModel] = []
     var collectionCellModelItemsArray:[CellModelItems] = []
 
@@ -25,14 +28,23 @@ class SearchViewModel: BaseViewModel {
                 CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
             }
 
+            self.deneme = sortedArray
             self.collectionViewCellModelArray.append(CellModel(items: self.collectionCellModelItemsArray))
-            print(self.collectionViewCellModelArray.count)
-            print(self.collectionCellModelItemsArray.count)
             completion()
         }
     }
 
+    func searchMovies(query: String, completion: @escaping()->()) {
+        NetworkManager.service.request(requestRoute: .searchMovie(query: query), responseModel: SearchedMovies.self) { [weak self] details in
+            guard let result = details.results else {return}
+            guard let self = self else {return}
 
+//            let searchResult = result.filter {
+//
+//            }
+
+        }
+    }
 }
 
 extension SearchViewModel: UITableViewDelegate, UITableViewDataSource {
@@ -43,7 +55,7 @@ extension SearchViewModel: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collectionCellModelItemsArray.count
+        return deneme.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,5 +65,18 @@ extension SearchViewModel: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+extension SearchViewModel: UISearchBarDelegate {
+
+    func setupSearchBar(with searchBar: UISearchBar) {
+        searchBar.delegate = self
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard searchText.trimmingCharacters(in: .whitespacesAndNewlines).count > 2 else {
+            return
+        }
     }
 }

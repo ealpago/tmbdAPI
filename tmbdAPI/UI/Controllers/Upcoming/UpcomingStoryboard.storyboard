@@ -21,7 +21,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.11627998740000001" green="0.067300605609999994" blue="0.058555004250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.066666666666666666" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vAZ-NS-eel" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="8A3-9m-Geb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vAZ-NS-eel" secondAttribute="trailing" id="Jdp-uO-kAz"/>

@@ -10,6 +10,7 @@ import UIKit
 class UpcomingViewModel: BaseViewModel {
     var selectedCell:()->() = {}
 
+    var upcommingArray: [UpcomingMoviesResults] = []
     var collectionViewCellModelArray:[CellModel] = []
     var collectionCellModelItemsArray:[CellModelItems] = []
 
@@ -19,13 +20,14 @@ class UpcomingViewModel: BaseViewModel {
             guard let result = details.results else {return}
             guard let self = self else {return}
 
+
+            upcommingArray = result
+
             self.collectionCellModelItemsArray = result.compactMap { movies in
-                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteCount, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
             }
 
             self.collectionViewCellModelArray.append(CellModel(items: self.collectionCellModelItemsArray))
-            print(self.collectionViewCellModelArray.count)
-            print(self.collectionCellModelItemsArray.count)
             completion()
         }
     }
@@ -40,7 +42,7 @@ extension UpcomingViewModel: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return collectionCellModelItemsArray.count
+        return upcommingArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
