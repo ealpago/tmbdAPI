@@ -16,6 +16,11 @@ class FavoritesViewController: BaseViewController<FavoritesViewModel> {
         viewModel.setupTableView(with: tableView)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        changeNavigationBar(navigationBackgroundColor: .darkerBrown, font: UIFont())
+    }
+
     override func setViewModel() {
         viewModel = FavoritesViewModel()
     }

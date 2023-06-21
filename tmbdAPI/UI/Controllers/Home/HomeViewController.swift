@@ -16,6 +16,11 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         viewModel.setupTableView(with: tableView, view: view)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        changeNavigationBar(navigationBackgroundColor: .darkerBrown, font: UIFont())
+    }
+
     override func setViewModel() {
         viewModel = HomeViewModel()
     }

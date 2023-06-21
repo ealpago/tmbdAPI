@@ -26,6 +26,11 @@ class UpcomingViewController: BaseViewController<UpcomingViewModel> {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        changeNavigationBar(navigationBackgroundColor: .darkerBrown, font: UIFont())
+    }
+
     override func setViewModel() {
         viewModel = UpcomingViewModel()
     }

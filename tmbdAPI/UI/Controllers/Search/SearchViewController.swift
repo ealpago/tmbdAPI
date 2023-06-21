@@ -20,6 +20,13 @@ class SearchViewController: BaseViewController<SearchViewModel> {
                 self.tableView.reloadData()
             }
         }
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = .white
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        changeNavigationBar(navigationBackgroundColor: .darkerBrown, font: UIFont())
     }
 
     override func setViewModel() {

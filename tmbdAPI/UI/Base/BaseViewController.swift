@@ -20,4 +20,21 @@ open class BaseViewController<T:BaseViewModel>: UIViewController, BaseViewModelP
     open func setViewModel() {
 
     }
+
+    open func changeNavigationBar(navigationBackgroundColor: UIColor, font: UIFont, textColor: UIColor = .white) {
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = navigationBackgroundColor
+            appearance.titleTextAttributes = [NSAttributedString.Key.font: font, .foregroundColor: textColor]
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+        } else {
+            navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.defaultPrompt)
+            navigationController?.navigationBar.shadowImage = UIImage()
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font, .foregroundColor: textColor]
+            navigationController?.navigationBar.barTintColor = navigationBackgroundColor
+            navigationController?.navigationBar.isTranslucent = false
+        }
+    }
 }
