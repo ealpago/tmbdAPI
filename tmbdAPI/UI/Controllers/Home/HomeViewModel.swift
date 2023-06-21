@@ -10,6 +10,8 @@ import UIKit
 
 final class HomeViewModel:BaseViewModel {
 
+    var goToDetail:()->() = {}
+
 }
 
 extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
@@ -39,6 +41,11 @@ extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as? CollectionTableViewCell {
+            let section = indexPath.section
+            cell.tableSection = section
+            cell.collectionViewTapped = {
+                self.goToDetail()
+            }
             return cell
         }
         return UITableViewCell()

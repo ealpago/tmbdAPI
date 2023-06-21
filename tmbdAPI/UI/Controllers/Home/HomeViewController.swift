@@ -14,6 +14,11 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.setupTableView(with: tableView, view: view)
+        viewModel.goToDetail = {
+            if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
