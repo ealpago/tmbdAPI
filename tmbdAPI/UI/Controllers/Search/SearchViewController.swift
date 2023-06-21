@@ -15,6 +15,11 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.setupTableView(with: tableView)
+        viewModel.popularMovies {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func setViewModel() {
