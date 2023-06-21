@@ -11,7 +11,6 @@ private let movieBaseURL = "https://api.themoviedb.org/3/movie/"
 private let seriesBaseURL = "https://api.themoviedb.org/3/tv/"
 private let apiKey = "?api_key=5f68b0ee2af0bcbf53e5984bc7e12b10"
 
-
 public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
@@ -79,7 +78,7 @@ public enum NetworkRouter {
             return .get
         case .similarSeries(_):
             return .get
-        case .searchMovie(query: let query):
+        case .searchMovie(_):
             return .get
         }
     }
