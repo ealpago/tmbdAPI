@@ -9,6 +9,18 @@ import UIKit
 
 extension UIViewController {
 
+    func parentViewController() -> UIViewController?{
+        parent?.view.superview?.parentViewController
+    }
+
+    func parentNavigationController() -> UINavigationController?{
+        parent?.view.superview?.parentViewController?.navigationController
+    }
+
+    func parentView() -> UIView?{
+        parentViewController()?.view
+    }
+
     public static var bundle: Bundle {
         get {
             Bundle(for: self)

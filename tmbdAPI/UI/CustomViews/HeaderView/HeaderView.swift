@@ -12,15 +12,10 @@ class HeaderView: UIView {
     //MARK: Outlets
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var mainStackView: UIStackView!
-    @IBOutlet private weak var buttonsStackView: UIStackView!
-    @IBOutlet private weak var moviesButton: UIButton!
-    @IBOutlet private weak var seriesButton: UIButton!
     @IBOutlet private weak var buttonContainerView: UIView!
     @IBOutlet private weak var headerMovieButton: UIButton!
 
     //MARK: Properties
-    var moviesButtonTapped:()->() = {}
-    var seriesButtonTapped:()->() = {}
     var headerMovieButtonTapped:()->() = {}
 
     //MARK: Init Setup
@@ -39,25 +34,11 @@ class HeaderView: UIView {
         Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
-        moviesButton.layer.borderWidth = 1
-        moviesButton.layer.borderColor = UIColor.brown.cgColor
-        moviesButton.layer.cornerRadius = moviesButton.frame.height / 2
-        seriesButton.layer.borderWidth = 1
-        seriesButton.layer.borderColor = UIColor.brown.cgColor
-        seriesButton.layer.cornerRadius = moviesButton.frame.height / 2
         headerMovieButton.layer.borderWidth = 2
         headerMovieButton.layer.borderColor = UIColor.brown.cgColor
     }
 
     //MARK: Actions
-    @IBAction func moviesButtonTapped(_ sender: UIButton) {
-        moviesButtonTapped()
-    }
-
-    @IBAction func seriesButtonTapped(_ sender: UIButton) {
-        seriesButtonTapped()
-    }
-
     @IBAction func headerMovieButtonTapped(_ sender: UIButton) {
         headerMovieButtonTapped()
     }

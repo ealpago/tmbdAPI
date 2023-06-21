@@ -21,6 +21,37 @@ open class BaseViewController<T:BaseViewModel>: UIViewController, BaseViewModelP
 
     }
 
+    func setTitle(title:String = "", backVisible:Bool = true, font: UIFont = UIFont(name: "HelveticaNeue-Bold", size: 12.0)!, navigationBackgrounColor: UIColor = .darkerBrown ) {
+        navigationItem.title = title
+        navigationItem.hidesBackButton = true
+
+        if(backVisible){
+            createCustomBackBarButton()
+        }
+
+        navigationController?.hideHairline()
+        changeNavigationBar(navigationBackgroundColor: navigationBackgrounColor, font: font)
+    }
+
+    private func createCustomBackBarButton(){
+            let customBackButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward") , style: .plain, target: self, action: #selector(backAction(sender:)))
+            customBackButton.imageInsets = UIEdgeInsets(top: 2, left: -4, bottom: 0, right: 0)
+            customBackButton.tintColor = .white
+            navigationItem.leftBarButtonItem = customBackButton
+        }
+
+        @objc func backAction(sender: UIBarButtonItem) {
+            backAction()
+        }
+
+        func backAction(){
+            if let navigationController = navigationController {
+                navigationController.popViewController(animated: true)
+            }else if let parentNavigationController = parentNavigationController(){
+                parentNavigationController.popViewController(animated: true)
+            }
+        }
+
     open func changeNavigationBar(navigationBackgroundColor: UIColor, font: UIFont, textColor: UIColor = .white) {
         if #available(iOS 15, *) {
             let appearance = UINavigationBarAppearance()
@@ -36,5 +67,33 @@ open class BaseViewController<T:BaseViewModel>: UIViewController, BaseViewModelP
             navigationController?.navigationBar.barTintColor = navigationBackgroundColor
             navigationController?.navigationBar.isTranslucent = false
         }
+    }
+}
+
+extension UINavigationController {
+
+    func hideHairline() {
+        if let hairline = findHairlineImageViewUnder(navigationBar) {
+            hairline.isHidden = true
+        }
+    }
+
+    func restoreHairline() {
+        if let hairline = findHairlineImageViewUnder(navigationBar) {
+            hairline.isHidden = false
+        }
+    }
+
+    func findHairlineImageViewUnder(_ view: UIView) -> UIImageView? {
+        if view is UIImageView && view.bounds.size.height <= 1.0 {
+            return view as? UIImageView
+        }
+
+        for subview in view.subviews {
+            if let imageView = findHairlineImageViewUnder(subview) {
+                return imageView
+            }
+        }
+        return nil
     }
 }

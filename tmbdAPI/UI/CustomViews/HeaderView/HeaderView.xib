@@ -10,12 +10,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="tmbdAPI" customModuleProvider="target">
             <connections>
                 <outlet property="buttonContainerView" destination="IWh-YG-eR1" id="YoH-16-JkW"/>
-                <outlet property="buttonsStackView" destination="Jz4-kn-BEa" id="wpW-vE-McW"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Kls-vg-iBu"/>
                 <outlet property="headerMovieButton" destination="SVU-kY-pXK" id="fA4-SH-6t7"/>
                 <outlet property="mainStackView" destination="Gt3-Pj-kUs" id="QcV-sn-mQo"/>
-                <outlet property="moviesButton" destination="Tjw-68-37h" id="M64-c7-GAw"/>
-                <outlet property="seriesButton" destination="Kxx-ev-e0I" id="KDa-Mr-fT4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,54 +23,11 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gt3-Pj-kUs">
                     <rect key="frame" x="0.0" y="0.0" width="482" height="462"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-sE-nAu">
-                            <rect key="frame" x="0.0" y="0.0" width="482" height="40"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jz4-kn-BEa">
-                                    <rect key="frame" x="20" y="0.0" width="442" height="40"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjw-68-37h">
-                                            <rect key="frame" x="0.0" y="0.0" width="216" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="U2P-1p-P2s"/>
-                                            </constraints>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="Filmler">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="moviesButtonTapped:" destination="-1" eventType="touchUpInside" id="xnY-za-bpb"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxx-ev-e0I">
-                                            <rect key="frame" x="226" y="0.0" width="216" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="4CJ-dF-0DW"/>
-                                            </constraints>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="Diziler">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="seriesButtonTapped:" destination="-1" eventType="touchUpInside" id="dIy-2u-9td"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="Jz4-kn-BEa" secondAttribute="bottom" id="4os-Xd-Blp"/>
-                                <constraint firstItem="Jz4-kn-BEa" firstAttribute="leading" secondItem="ciO-sE-nAu" secondAttribute="leading" constant="20" id="GQo-CS-Xoy"/>
-                                <constraint firstAttribute="trailing" secondItem="Jz4-kn-BEa" secondAttribute="trailing" constant="20" id="Qrs-Vd-rHu"/>
-                                <constraint firstItem="Jz4-kn-BEa" firstAttribute="top" secondItem="ciO-sE-nAu" secondAttribute="top" id="SYD-jG-aAd"/>
-                            </constraints>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWh-YG-eR1">
-                            <rect key="frame" x="0.0" y="60" width="482" height="402"/>
+                            <rect key="frame" x="0.0" y="0.0" width="482" height="462"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVU-kY-pXK">
-                                    <rect key="frame" x="40" y="20" width="402" height="362"/>
+                                    <rect key="frame" x="40" y="20" width="402" height="422"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_FMjpg_UX1000_"/>
                                     <connections>
