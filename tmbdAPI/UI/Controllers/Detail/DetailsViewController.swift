@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: BaseViewController<DetailViewModel> {
 
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var contentView: UIView!
@@ -36,5 +36,9 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func setViewModel() {
+        viewModel = DetailViewModel()
     }
 }

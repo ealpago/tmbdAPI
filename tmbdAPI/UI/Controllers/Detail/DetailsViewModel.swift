@@ -5,4 +5,8 @@
 //  Created by Emre Alpago on 13.06.2023.
 //
 
-import Foundation
+import UIKit
+
+class DetailViewModel: BaseViewModel {
+    
+}
