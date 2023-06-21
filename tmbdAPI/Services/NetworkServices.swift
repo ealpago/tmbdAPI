@@ -29,6 +29,7 @@ public enum NetworkRouter {
     case movieKeywords(movieID: Int)
     case movieRecommendations(movieID: Int)
     case similarMovies(movieID: Int)
+    case searchMovie(query: String)
 
     case todayAiringSeries
     case upcomingSeries
@@ -78,6 +79,8 @@ public enum NetworkRouter {
             return .get
         case .similarSeries(_):
             return .get
+        case .searchMovie(query: let query):
+            return .get
         }
     }
 
@@ -101,6 +104,8 @@ public enum NetworkRouter {
             return movieBaseURL + "\(movieID)" + "/recommendations" + apiKey
         case .similarMovies(let movieID):
             return movieBaseURL + "\(movieID)" + "/similar" + apiKey
+        case .searchMovie(query: let query):
+            return movieBaseURL + apiKey + "&query=\(query)"
         case .todayAiringSeries:
             return seriesBaseURL + "airing_today" + apiKey
         case .upcomingSeries:
