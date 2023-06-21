@@ -151,39 +151,29 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SlQ-6e-JgD">
                                                                 <rect key="frame" x="0.0" y="50" width="377" height="30"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sitcom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih1-tG-ifa">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSp-Ne-Rk6" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="30"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horror" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiY-x1-l2B">
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7C4-JZ-NI8" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
                                                                         <rect key="frame" x="128.33333333333334" y="0.0" width="120.33333333333334" height="30"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperHero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhN-RZ-U9r">
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHC-RT-Grt" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
                                                                         <rect key="frame" x="256.66666666666669" y="0.0" width="120.33333333333331" height="30"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bütçe:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOY-3M-m0a">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOm-jc-qVp" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="100" width="377" height="30"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hasılat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vy-6h-6P7">
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3j-Za-gHs" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="150" width="377" height="30"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
                                                         </subviews>
                                                     </stackView>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XEW-2f-zhV">
@@ -200,7 +190,7 @@
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                     </collectionView>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-J3-e42">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-J3-e42">
                                                         <rect key="frame" x="0.0" y="560" width="377" height="160"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
@@ -249,13 +239,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="budgetCategoryLabel" destination="yOY-3M-m0a" id="kod-Js-uaa"/>
+                        <outlet property="budgetCategoryLabelView" destination="BOm-jc-qVp" id="nFW-tN-21p"/>
                         <outlet property="categoriesDetailStackView" destination="SlQ-6e-JgD" id="rYh-vO-p7W"/>
                         <outlet property="contentView" destination="v3L-I9-khU" id="EDu-QV-EvM"/>
                         <outlet property="countryLabelView" destination="hUR-2M-gX8" id="DSq-kc-wo4"/>
                         <outlet property="descriptionLabel" destination="aD4-Zx-Vev" id="KOt-ER-1E6"/>
                         <outlet property="detailsStackView" destination="G1N-LR-l3J" id="qIl-7M-lMF"/>
-                        <outlet property="firstCategoryLabel" destination="ih1-tG-ifa" id="eGl-cb-3ej"/>
+                        <outlet property="firstCategoryLabelView" destination="bSp-Ne-Rk6" id="yzi-mJ-iZC"/>
                         <outlet property="headTitlesStackView" destination="05B-A8-HKF" id="Htp-1I-c3H"/>
                         <outlet property="imageContainerView" destination="eEy-U2-0GZ" id="EEU-nD-OuJ"/>
                         <outlet property="imageView" destination="k5f-ty-Ugh" id="Zie-EJ-9HT"/>
@@ -264,10 +254,10 @@
                         <outlet property="percentLabel" destination="SCq-cg-58w" id="mib-ie-qi2"/>
                         <outlet property="previewStackView" destination="FPh-js-wrz" id="kU8-lo-Cw2"/>
                         <outlet property="recomendedCollectionView" destination="PIM-J3-e42" id="cQA-oZ-J2N"/>
-                        <outlet property="revenuesCategoryLabel" destination="7vy-6h-6P7" id="l6l-CE-HM8"/>
+                        <outlet property="revenuesCategoryLabelView" destination="S3j-Za-gHs" id="qUJ-pJ-R6g"/>
                         <outlet property="scrollView" destination="k0v-Ir-15v" id="zRR-gO-GK1"/>
-                        <outlet property="secondCategoryLabel" destination="kiY-x1-l2B" id="yxX-p6-Qf4"/>
-                        <outlet property="thirdCategoryLabel" destination="bhN-RZ-U9r" id="b2M-U1-2LP"/>
+                        <outlet property="secondCategoryLabelView" destination="7C4-JZ-NI8" id="sNJ-bz-kTT"/>
+                        <outlet property="thirdCategoryLabelView" destination="yHC-RT-Grt" id="oVc-Dj-hoJ"/>
                         <outlet property="timeLabelView" destination="hst-O7-jLv" id="NoQ-Jq-PU1"/>
                         <outlet property="titleContainerView" destination="Yva-Mw-av3" id="BBC-ap-1X0"/>
                         <outlet property="titleLabel" destination="9vZ-4u-FrN" id="xnJ-Ul-Xl5"/>

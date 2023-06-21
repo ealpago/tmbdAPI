@@ -18,6 +18,12 @@ class DetailInfoView: UIView {
         }
     }
 
+    @IBInspectable var textAlignment: NSTextAlignment = .center {
+        didSet {
+            titleLabel.textAlignment = textAlignment
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

@@ -27,11 +27,11 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBOutlet private weak var countryLabelView: DetailInfoView!
     @IBOutlet private weak var timeLabelView: DetailInfoView!
     @IBOutlet private weak var categoriesDetailStackView: UIStackView!
-    @IBOutlet private weak var firstCategoryLabel: UILabel!
-    @IBOutlet private weak var secondCategoryLabel: UILabel!
-    @IBOutlet private weak var thirdCategoryLabel: UILabel!
-    @IBOutlet private weak var budgetCategoryLabel: UILabel!
-    @IBOutlet private weak var revenuesCategoryLabel: UILabel!
+    @IBOutlet private weak var firstCategoryLabelView: DetailInfoView!
+    @IBOutlet private weak var secondCategoryLabelView: DetailInfoView!
+    @IBOutlet private weak var thirdCategoryLabelView: DetailInfoView!
+    @IBOutlet private weak var budgetCategoryLabelView: DetailInfoView!
+    @IBOutlet private weak var revenuesCategoryLabelView: DetailInfoView!
     @IBOutlet private weak var recomendedCollectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -49,5 +49,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
         previewStackView.layer.borderColor = UIColor.brown.cgColor
         previewStackView.layer.borderWidth = 2
         yearLabelView.title = "2013"
+        budgetCategoryLabelView.textAlignment = .left
+        revenuesCategoryLabelView.textAlignment = .left
     }
 }
