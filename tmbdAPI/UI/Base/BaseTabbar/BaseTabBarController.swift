@@ -96,8 +96,8 @@ final class BaseTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
-        UITabBar.appearance().backgroundColor = .black.withAlphaComponent(0.6)
-        UITabBar.appearance().tintColor = .white
+        UITabBar.appearance().backgroundColor = .white
+        UITabBar.appearance().tintColor = .brown
     }
 
     func setupTabBar() {
