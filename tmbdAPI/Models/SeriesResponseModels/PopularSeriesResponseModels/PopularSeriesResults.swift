@@ -20,7 +20,7 @@ struct PopularSeriesResults: Codable {
     var overview: String?
     var popularity: Float?
     var posterPath: String?
-    var voteAverage: Int?
+    var voteAverage: Float?
     var voteCount: Int?
 
     enum CodingKeys: String, CodingKey {
@@ -52,7 +52,7 @@ struct PopularSeriesResults: Codable {
         overview = try values.decodeIfPresent(String.self, forKey: .overview)
         popularity = try values.decodeIfPresent(Float.self, forKey: .popularity)
         posterPath = try values.decodeIfPresent(String.self, forKey: .posterPath)
-        voteAverage = try values.decodeIfPresent(Int.self, forKey: .voteAverage)
+        voteAverage = try values.decodeIfPresent(Float.self, forKey: .voteAverage)
         voteCount = try values.decodeIfPresent(Int.self, forKey: .voteCount)
     }
 }

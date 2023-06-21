@@ -13,17 +13,15 @@ class CollectionTableViewCell: UITableViewCell {
 
     var collectionViewCellModelArray:[CellModel] = []
     var collectionCellModelItemsArray:[CellModelItems] = []
-
     var collection2ViewCellModelArray:[CellModel] = []
     var collection2CellModelItemsArray:[CellModelItems] = []
-
     var collection3ViewCellModelArray:[CellModel] = []
     var collection3CellModelItemsArray:[CellModelItems] = []
-
     var collection4ViewCellModelArray:[CellModel] = []
     var collection4CellModelItemsArray:[CellModelItems] = []
 
     var collectionViewTapped:()->() = {}
+
     var tableSection = 0
     
     override func awakeFromNib() {
@@ -54,7 +52,6 @@ class CollectionTableViewCell: UITableViewCell {
         popularMovies {
             group.leave()
         }
-
 
         topRatedMovies {
             group.leave()
@@ -126,7 +123,6 @@ class CollectionTableViewCell: UITableViewCell {
             completion()
         }
     }
-
 }
 
 extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -147,7 +143,7 @@ extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         if tableSection == 2 {
             return collection3CellModelItemsArray.count
         } else {
-            return collection3CellModelItemsArray.count
+            return collection4CellModelItemsArray.count
         }
     }
 
@@ -172,9 +168,6 @@ extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDat
                 cell.setupCell(cellModel: cellModel)
                 return cell
             }
-//            let cellModel = collectionCellModelItemsArray[indexPath.row]
-//            cell.setupCell(cellModel: cellModel)
-//            return cell
         }
         return UICollectionViewCell()
     }
