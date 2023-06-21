@@ -12,7 +12,7 @@ struct CellModelItems {
     var name: String?
     var image: String?
     var description: String?
-    var vote: Int?
+    var vote: Float?
     var makingYear: String?
     var makingCountry: String?
     var duration: String?
@@ -21,7 +21,7 @@ struct CellModelItems {
     var producer: String?
     var writer: String?
 
-    init(id: Int?, name: String?, image: String?, description: String?, vote: Int?, makingYear: String?, makingCountry: String?, duration: String?, budget: String?, revenue: String?, producer: String?, writer: String?) {
+    init(id: Int?, name: String?, image: String?, description: String?, vote: Float?, makingYear: String?, makingCountry: String?, duration: String?, budget: String?, revenue: String?, producer: String?, writer: String?) {
         self.id = id
         self.name = name
         self.image = image
