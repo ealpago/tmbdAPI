@@ -15,10 +15,10 @@ extension UIImageView {
         contentMode = mode
 
         if let data = cache.cachedResponse(for: request)?.data, let image = UIImage(data: data) {
-            print("Resim cache den okundu")
+//            print("Resim cache den okundu")
             self.image = image
         } else {
-            print("resim download edildi")
+//            print("resim download edildi")
             URLSession.shared.dataTask(with: imageURL) { data, response, error in
                 guard
                     let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
