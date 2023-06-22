@@ -30,16 +30,6 @@ public enum NetworkRouter {
     case similarMovies(movieID: Int)
     case searchMovie(query: String)
 
-    case todayAiringSeries
-    case upcomingSeries
-    case populerSeries
-    case topRatedSeries
-    case seriesDetail(seriesID: Int)
-    case seriesCredits(seriesID: Int)
-    case seriesKeywords(seriesID: Int)
-    case seriesRecommendations(seriesID: Int)
-    case similarSeries(seriesID: Int)
-
     public var method: HTTPMethod {
         switch self {
         case .nowPlayingMovies:
@@ -59,24 +49,6 @@ public enum NetworkRouter {
         case .movieRecommendations(_):
             return .get
         case .similarMovies(_):
-            return .get
-        case .todayAiringSeries:
-            return .get
-        case .upcomingSeries:
-            return .get
-        case .populerSeries:
-            return .get
-        case .topRatedSeries:
-            return .get
-        case .seriesDetail(_):
-            return .get
-        case .seriesCredits(_):
-            return .get
-        case .seriesKeywords(_):
-            return .get
-        case .seriesRecommendations(_):
-            return .get
-        case .similarSeries(_):
             return .get
         case .searchMovie(_):
             return .get
@@ -105,24 +77,6 @@ public enum NetworkRouter {
             return movieBaseURL + "\(movieID)" + "/similar" + apiKey
         case .searchMovie(query: let query):
             return movieBaseURL + apiKey + "&query=\(query)"
-        case .todayAiringSeries:
-            return seriesBaseURL + "airing_today" + apiKey
-        case .upcomingSeries:
-            return seriesBaseURL + "on_the_air" + apiKey
-        case .populerSeries:
-            return seriesBaseURL + "popular" + apiKey
-        case .topRatedSeries:
-            return seriesBaseURL + "top_rated" + apiKey
-        case .seriesDetail(let seriesID):
-            return seriesBaseURL + "\(seriesID)" + apiKey
-        case .seriesCredits(let seriesID):
-            return seriesBaseURL + "\(seriesID)" + "/credits" + apiKey
-        case .seriesKeywords(let seriesID):
-            return seriesBaseURL + "\(seriesID)" + "/keywords" + apiKey
-        case .seriesRecommendations(let seriesID):
-            return seriesBaseURL + "\(seriesID)" + "/recommendations" + apiKey
-        case .similarSeries(let seriesID):
-            return seriesBaseURL + "\(seriesID)" + "/similar" + apiKey
         }
     }
 }
