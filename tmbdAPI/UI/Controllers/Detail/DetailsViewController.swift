@@ -32,12 +32,20 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBOutlet private weak var thirdCategoryLabelView: DetailInfoView!
     @IBOutlet private weak var budgetCategoryLabelView: DetailInfoView!
     @IBOutlet private weak var revenuesCategoryLabelView: DetailInfoView!
+    @IBOutlet private weak var castCollectionView: UICollectionView!
     @IBOutlet private weak var recomendedCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitle(title: "DR. Strange")
         setupUI()
+        viewModel.setupCollectionView(with: castCollectionView)
+        viewModel.setupCollectionView(with: recomendedCollectionView)
+        viewModel.recommendedMovieTapped = {
+            if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 
     override func setViewModel() {

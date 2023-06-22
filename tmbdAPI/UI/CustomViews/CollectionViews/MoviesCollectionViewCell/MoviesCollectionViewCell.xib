@@ -10,17 +10,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MoviesCollectionViewCell" reuseIdentifier="MoviesCollectionViewCell" id="OJQ-8A-n35" customClass="MoviesCollectionViewCell" customModule="tmbdAPI" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="168" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Avv-t4-D6s">
-                <rect key="frame" x="0.0" y="0.0" width="168" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQW-pe-dvE">
-                        <rect key="frame" x="0.0" y="0.0" width="168" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_FMjpg_UX1000_" translatesAutoresizingMaskIntoConstraints="NO" id="1Ur-r0-BUE">
-                                <rect key="frame" x="0.0" y="0.0" width="168" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="X1m-ZK-p9i"/>
+                                    <constraint firstAttribute="height" constant="160" id="yjJ-Wj-d3j"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -41,7 +45,7 @@
             <size key="customSize" width="168" height="200"/>
             <connections>
                 <outlet property="imageContainerView" destination="hQW-pe-dvE" id="B4O-DN-xJp"/>
-                <outlet property="imageView" destination="1Ur-r0-BUE" id="6ag-gV-NqX"/>
+                <outlet property="imageView" destination="1Ur-r0-BUE" id="cNG-s0-feE"/>
             </connections>
             <point key="canvasLocation" x="140.45801526717557" y="59.154929577464792"/>
         </collectionViewCell>
