@@ -24,8 +24,8 @@ open class BaseSceneDelegate: UIResponder, UIWindowSceneDelegate {
     public var activityIndicatorColor = UIColor.white
 
     open func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        window?.rootViewController = "LaunchScreen".initialViewController
-        window?.makeKeyAndVisible()
+//        window?.rootViewController = "LaunchScreen".initialViewController
+//        window?.makeKeyAndVisible()
         NetworkMonitor.shared.delegate = self
         NetworkMonitor.shared.startMonitoring()
         guard let _ = (scene as? UIWindowScene) else { return }

@@ -76,7 +76,7 @@ public enum NetworkRouter {
         case .similarMovies(let movieID):
             return movieBaseURL + "\(movieID)" + "/similar" + apiKey
         case .searchMovie(query: let query):
-            return movieBaseURL + apiKey + "&query=\(query)"
+            return "https://api.themoviedb.org/3/search/movie" + apiKey + "&query=\(query)"
         }
     }
 }

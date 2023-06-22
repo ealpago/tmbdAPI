@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailViewModel: BaseViewModel {
-    var recommendedMovieTapped:(Int)->() = {id in}
+    var recommendedMovieTapped:(Int?)->() = {id in}
     var reloadCollectionViewData:()->() = {}
     var movieDetail: MovieDetail?
     var movieCast: MovieCredits?
@@ -64,7 +64,7 @@ class DetailViewModel: BaseViewModel {
             self.recommendedMovies = results
 
             self.recommendationMoviesModelItems = results.compactMap { movies in
-                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview)
             }
 
             self.recommendationMoviesModel.append(CellModel(items: self.recommendationMoviesModelItems))
@@ -104,14 +104,8 @@ extension DetailViewModel: UICollectionViewDelegate, UICollectionViewDataSource 
             }
             let cellModel = recommendationMoviesModelItems[indexPath.row]
             cell.setupCell(cellModel: cellModel)
+            cell.didCellTap = recommendedMovieTapped
             return cell
-        }
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView.tag == 1 {
-            let cellID = recommendationMoviesModelItems[indexPath.row].id ?? 0
-            recommendedMovieTapped(cellID)
         }
     }
 }

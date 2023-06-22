@@ -17,7 +17,6 @@ class UpcomingViewController: BaseViewController<UpcomingViewModel> {
         viewModel.upcomingMovies {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                self.stopLoading()
             }
         }
         viewModel.selectedCell = { id in

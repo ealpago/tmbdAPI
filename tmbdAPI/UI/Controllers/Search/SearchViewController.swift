@@ -15,6 +15,7 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.setupTableView(with: tableView)
+        viewModel.setupSearchBar(with: searchBar)
         viewModel.reloadTableView = {
             DispatchQueue.main.async {
                 self.tableView.reloadData()

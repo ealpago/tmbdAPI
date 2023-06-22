@@ -25,10 +25,11 @@ class UpcomingViewModel: BaseViewModel {
             upcommingArray = result
 
             self.collectionCellModelItemsArray = result.compactMap { movies in
-                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview)
             }
 
             self.collectionViewCellModelArray.append(CellModel(items: self.collectionCellModelItemsArray))
+            self.delegate?.stopLoading()
             completion()
         }
     }

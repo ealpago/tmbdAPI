@@ -71,7 +71,7 @@ class CollectionTableViewCell: UITableViewCell {
             guard let self = self else {return}
 
             self.collectionCellModelItemsArray = result.compactMap { movies in
-                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview)
             }
 
             self.collectionViewCellModelArray.append(CellModel(items: self.collectionCellModelItemsArray))
@@ -86,7 +86,7 @@ class CollectionTableViewCell: UITableViewCell {
             guard let self = self else {return}
 
             self.collection2CellModelItemsArray = result.compactMap { movies in
-                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview)
             }
 
             self.collection2ViewCellModelArray.append(CellModel(items: self.collection2CellModelItemsArray))
@@ -101,7 +101,7 @@ class CollectionTableViewCell: UITableViewCell {
             guard let self = self else {return}
 
             self.collection3CellModelItemsArray = result.compactMap { movies in
-                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview)
             }
 
             self.collection3ViewCellModelArray.append(CellModel(items: self.collection3CellModelItemsArray))
@@ -116,7 +116,7 @@ class CollectionTableViewCell: UITableViewCell {
             guard let self = self else {return}
 
             self.collection4CellModelItemsArray = result.compactMap { movies in
-                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview)
             }
 
             self.collection4ViewCellModelArray.append(CellModel(items: self.collection4CellModelItemsArray))

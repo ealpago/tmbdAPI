@@ -48,7 +48,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
         }
         viewModel.recommendedMovieTapped = { id in
                 DispatchQueue.main.async {
-                    self.viewModel.takeData(movieID: id)
+                    self.viewModel.takeData(movieID: id ?? 0)
                     self.setDataToUI()
                     self.castCollectionView.reloadData()
                     self.recomendedCollectionView.reloadData()

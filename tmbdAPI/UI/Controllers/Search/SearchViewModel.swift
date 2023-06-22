@@ -12,10 +12,9 @@ class SearchViewModel: BaseViewModel {
     var selectedCell:(Int)->() = {id in}
     var textDidChange:()->() = {}
     var reloadTableView:()->() = {}
-    var deneme: [PopularMoviesResults] = []
+    var popularMoviesArray: [PopularMoviesResults] = []
     var searchedList: [SearchedMoviesResults] = []
 
-    var collectionViewCellModelArray:[CellModel] = []
     var collectionCellModelItemsArray:[CellModelItems] = []
 
     func popularMovies(completion: @escaping()->()) {
@@ -27,24 +26,27 @@ class SearchViewModel: BaseViewModel {
 
             let sortedArray = result.sorted{$0.voteAverage ?? 0 < $1.voteAverage ?? 0}
             self.collectionCellModelItemsArray = sortedArray.compactMap { movies in
-                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview)
             }
 
-            self.deneme = sortedArray
-            self.collectionViewCellModelArray.append(CellModel(items: self.collectionCellModelItemsArray))
+            self.popularMoviesArray = sortedArray
             completion()
         }
     }
 
     func searchMovies(query: String) {
         self.delegate?.startLoading()
-        NetworkManager.service.request(requestRoute: .searchMovie(query: query), responseModel: SearchedMovies.self) { [weak self] details in
+        NetworkManager.service.request(requestRoute: .searchMovie(query: query), responseModel: SearchedMovies.self) { details in
             guard let result = details.results else {return}
-            guard let self = self else {return}
 
-            searchedList = result
-            DispatchQueue.main.async {
-                self.reloadTableView()
+            self.searchedList = result
+            self.collectionCellModelItemsArray = self.searchedList.compactMap { movies in
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview)
+            }
+
+            DispatchQueue.main.async { [self] in
+                reloadTableView()
+                delegate?.stopLoading()
             }
         }
     }
@@ -58,7 +60,7 @@ extension SearchViewModel: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return deneme.count
+        return collectionCellModelItemsArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
