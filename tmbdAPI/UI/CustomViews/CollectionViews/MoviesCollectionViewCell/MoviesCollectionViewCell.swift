@@ -13,10 +13,13 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageView: UIImageView!
 
     private var itemModel: CellModelItems?
+    var didCellTap:(Int?)->() = {id in}
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.imageContainerView.layer.cornerRadius =  8
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+        self.addGestureRecognizer(gesture)
     }
 
     func setupCell(cellModel: CellModelItems) {
@@ -28,5 +31,9 @@ class MoviesCollectionViewCell: UICollectionViewCell {
                 self.imageView?.downloaded(from: characterImageURL)
             }
         }
+    }
+
+    @objc func cellTapped() {
+        didCellTap(itemModel?.id)
     }
 }

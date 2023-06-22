@@ -20,7 +20,7 @@ class CollectionTableViewCell: UITableViewCell {
     var collection4ViewCellModelArray:[CellModel] = []
     var collection4CellModelItemsArray:[CellModelItems] = []
 
-    var collectionViewTapped:(Int)->() = {movieID in}
+    var collectionViewTapped:(Int?)->() = {movieID in}
 
     var tableSection = 0
     
@@ -149,33 +149,23 @@ extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDat
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionViewCell.identifier,for: indexPath) as? MoviesCollectionViewCell {
-            if tableSection == 0 {
+            switch tableSection {
+            case 0:
                 let cellModel = collectionCellModelItemsArray[indexPath.row]
                 cell.setupCell(cellModel: cellModel)
-                return cell
-            }
-            if tableSection == 1 {
+            case 1:
                 let cellModel = collection2CellModelItemsArray[indexPath.row]
                 cell.setupCell(cellModel: cellModel)
-                return cell
-            }
-            if tableSection == 2 {
+            case 2:
                 let cellModel = collection3CellModelItemsArray[indexPath.row]
                 cell.setupCell(cellModel: cellModel)
-                return cell
-            } else {
+            default:
                 let cellModel = collection4CellModelItemsArray[indexPath.row]
                 cell.setupCell(cellModel: cellModel)
-                return cell
             }
+            cell.didCellTap = self.collectionViewTapped
+            return cell
         }
         return UICollectionViewCell()
     }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let id = collectionCellModelItemsArray[indexPath.row].id
-        collectionViewTapped(id ?? 0)
-    }
 }
-
-

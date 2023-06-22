@@ -46,7 +46,7 @@ extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
             let section = indexPath.section
             cell.tableSection = section
             cell.collectionViewTapped = { movieID in
-                self.goToDetail(movieID)
+                self.goToDetail(movieID ?? 0)
             }
             return cell
         }

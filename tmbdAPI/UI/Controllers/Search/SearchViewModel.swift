@@ -19,6 +19,7 @@ class SearchViewModel: BaseViewModel {
     var collectionCellModelItemsArray:[CellModelItems] = []
 
     func popularMovies(completion: @escaping()->()) {
+        self.delegate?.startLoading()
         NetworkManager.service.request(requestRoute: .popularMovies, responseModel: PopularMovies.self) { [weak self] details in
 
             guard let result = details.results else {return}
@@ -36,6 +37,7 @@ class SearchViewModel: BaseViewModel {
     }
 
     func searchMovies(query: String) {
+        self.delegate?.startLoading()
         NetworkManager.service.request(requestRoute: .searchMovie(query: query), responseModel: SearchedMovies.self) { [weak self] details in
             guard let result = details.results else {return}
             guard let self = self else {return}

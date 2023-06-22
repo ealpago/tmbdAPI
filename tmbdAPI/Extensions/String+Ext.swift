@@ -15,5 +15,9 @@ extension String {
     public func viewController(identifier: String) -> UIViewController {
         storyBoard.instantiateViewController(withIdentifier: identifier)
     }
+
+    public var initialViewController: UIViewController {
+        storyBoard.instantiateInitialViewController()!
+    }
 }
 

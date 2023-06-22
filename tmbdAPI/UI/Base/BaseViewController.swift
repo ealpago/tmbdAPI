@@ -21,6 +21,18 @@ open class BaseViewController<T:BaseViewModel>: UIViewController, BaseViewModelP
 
     }
 
+    open func startLoading(){
+        DispatchQueue.main.async {
+            (self.view.window?.windowScene?.delegate as? BaseSceneDelegate)?.startLoading()
+        }
+    }
+
+    open func stopLoading(){
+        DispatchQueue.main.async {
+            (self.view.window?.windowScene?.delegate as? BaseSceneDelegate)?.stopLoading()
+        }
+    }
+
     func setTitle(title:String = "", backVisible:Bool = true, font: UIFont = UIFont(name: "HelveticaNeue-Bold", size: 14.0)!, navigationBackgrounColor: UIColor = .darkerBrown ) {
         navigationItem.title = title
         navigationItem.hidesBackButton = true

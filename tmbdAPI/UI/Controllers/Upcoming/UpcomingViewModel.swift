@@ -15,6 +15,7 @@ class UpcomingViewModel: BaseViewModel {
     var collectionCellModelItemsArray:[CellModelItems] = []
 
     func upcomingMovies(completion: @escaping()->()) {
+        self.delegate?.startLoading()
         NetworkManager.service.request(requestRoute: .upcomingMovies, responseModel: UpcomingMovies.self) { [weak self] details in
 
             guard let result = details.results else {return}

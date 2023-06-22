@@ -13,5 +13,6 @@ open class BaseViewModel: NSObject {
 }
 
 public protocol BaseViewModelProtocol {
-
+    func startLoading()
+    func stopLoading()
 }

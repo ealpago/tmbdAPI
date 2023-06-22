@@ -23,6 +23,7 @@ class SearchViewController: BaseViewController<SearchViewModel> {
         viewModel.popularMovies {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.stopLoading()
             }
         }
         viewModel.selectedCell = { id in

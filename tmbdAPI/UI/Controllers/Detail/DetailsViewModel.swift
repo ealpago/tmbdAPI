@@ -18,6 +18,7 @@ class DetailViewModel: BaseViewModel {
 
 
     func takeData(movieID: Int) {
+        self.delegate?.startLoading()
         let group = DispatchGroup()
         group.enter()
         group.enter()
@@ -38,6 +39,7 @@ class DetailViewModel: BaseViewModel {
         group.notify(queue: .main, execute: {
             DispatchQueue.main.async {
                 self.reloadCollectionViewData()
+                self.delegate?.stopLoading()
             }
         })
     }
