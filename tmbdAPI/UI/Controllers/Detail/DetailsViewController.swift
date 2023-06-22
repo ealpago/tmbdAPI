@@ -35,12 +35,21 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBOutlet private weak var castCollectionView: UICollectionView!
     @IBOutlet private weak var recomendedCollectionView: UICollectionView!
 
+    var movieDetailID: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitle(title: "DR. Strange")
         setupUI()
         viewModel.setupCollectionView(with: castCollectionView)
         viewModel.setupCollectionView(with: recomendedCollectionView)
+        viewModel.takeData(movieID: 238)
+        viewModel.reloadCollectionViewData = {
+            DispatchQueue.main.async {
+                self.castCollectionView.reloadData()
+                self.recomendedCollectionView.reloadData()
+            }
+        }
         viewModel.recommendedMovieTapped = {
             if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
                 self.navigationController?.pushViewController(vc, animated: true)

@@ -9,6 +9,58 @@ import UIKit
 
 class DetailViewModel: BaseViewModel {
     var recommendedMovieTapped:()->() = {}
+    var reloadCollectionViewData:()->() = {}
+    var movieDetail: MovieDetail?
+    var movieCast: MovieCredits?
+    var recommendedMovies: [RecommendationResults] = []
+
+
+    func takeData(movieID: Int) {
+        let group = DispatchGroup()
+        group.enter()
+        group.enter()
+        group.enter()
+
+        getMovieDetail(movieID: movieID) {
+            group.leave()
+        }
+
+        getMovieCast(movieID: movieID) {
+            group.leave()
+        }
+
+        getMovieRecommendation(movieID: movieID) {
+            group.leave()
+        }
+
+        group.notify(queue: .main, execute: {
+            DispatchQueue.main.async {
+                self.reloadCollectionViewData()
+            }
+        })
+    }
+
+    func getMovieDetail(movieID: Int, completion: @escaping()->()) {
+        NetworkManager.service.request(requestRoute: .moviesDetail(movieID: movieID), responseModel: MovieDetail.self) { details in
+            self.movieDetail = details
+            completion()
+        }
+    }
+
+    func getMovieCast(movieID: Int, completion: @escaping()->()) {
+        NetworkManager.service.request(requestRoute: .moviesCredits(movieID: movieID), responseModel: MovieCredits.self) { details in
+            self.movieCast = details
+            completion()
+        }
+    }
+
+    func getMovieRecommendation(movieID: Int, completion: @escaping()->()) {
+        NetworkManager.service.request(requestRoute: .movieRecommendations(movieID: movieID), responseModel: MovieRecommendations.self) { details in
+            guard let results = details.results else {return}
+            self.recommendedMovies = results
+            completion()
+        }
+    }
 }
 
 extension DetailViewModel: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -19,7 +71,11 @@ extension DetailViewModel: UICollectionViewDelegate, UICollectionViewDataSource 
         collectionView.dataSource = self
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        if collectionView.tag == 0 {
+            return movieCast?.cast?.count ?? 0
+            } else {
+            return recommendedMovies.count
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
