@@ -14,12 +14,10 @@ enum TabBarConstant {
     static let upcomingStoryBoardID = "UpcomingViewController"
     static let searchStoryBoardName = "SearchStoryboard"
     static let searchStoryBoardID = "SearchViewController"
-    static let favoritesStoryBoardName = "FavoritesStoryboard"
-    static let favoritesStoryBoardID = "FavoritesViewController"
 }
 
 enum TabbarItemType {
-    case home, upcoming, search, favorites
+    case home, upcoming, search
 
     var name: String {
         switch self {
@@ -29,9 +27,6 @@ enum TabbarItemType {
             return TabBarConstant.upcomingStoryBoardName
         case .search:
             return TabBarConstant.searchStoryBoardName
-        case .favorites:
-            return TabBarConstant.favoritesStoryBoardName
-
         }
     }
 
@@ -43,8 +38,6 @@ enum TabbarItemType {
             return TabBarConstant.upcomingStoryBoardID
         case .search:
             return TabBarConstant.searchStoryBoardID
-        case .favorites:
-            return TabBarConstant.favoritesStoryBoardID
         }
     }
 
@@ -56,8 +49,6 @@ enum TabbarItemType {
             return UIImage(systemName: "clock.badge.checkmark")!
         case .search:
             return UIImage(systemName: "magnifyingglass.circle")!
-        case .favorites:
-            return  UIImage(systemName: "star")!
         }
     }
 
@@ -69,8 +60,6 @@ enum TabbarItemType {
             return UIImage(systemName: "clock.badge.checkmark.fill")!
         case .search:
             return UIImage(systemName: "magnifyingglass.circle.fill")!
-        case .favorites:
-            return  UIImage(systemName: "star.fill")!
         }
     }
 
@@ -82,15 +71,13 @@ enum TabbarItemType {
             return "Çok Yakında"
         case .search:
             return "Arama"
-        case .favorites:
-            return "Favoriler"
         }
     }
 }
 
 final class BaseTabBarController: UITabBarController {
     var items: [TabbarItemType] {
-        [.home, .upcoming, .search ,.favorites]
+        [.home, .upcoming, .search]
     }
 
     override func viewDidLoad() {
