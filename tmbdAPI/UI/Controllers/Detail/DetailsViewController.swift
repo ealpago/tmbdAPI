@@ -36,7 +36,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
         super.viewDidLoad()
         setTitle(title: "Detaylar")
         setupUI()
-        viewModel.takeData(movieID: 238)
+        viewModel.takeData(movieID: movieDetailID ?? 0)
         viewModel.setupCollectionView(with: castCollectionView)
         viewModel.setupCollectionView(with: recomendedCollectionView)
         viewModel.reloadCollectionViewData = {
@@ -46,15 +46,13 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
                 self.recomendedCollectionView.reloadData()
             }
         }
-        viewModel.recommendedMovieTapped = {
-            if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
+        viewModel.recommendedMovieTapped = { id in
                 DispatchQueue.main.async {
+                    self.viewModel.takeData(movieID: id)
                     self.setDataToUI()
                     self.castCollectionView.reloadData()
                     self.recomendedCollectionView.reloadData()
                 }
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
         }
     }
 
@@ -63,16 +61,11 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     }
 
     func setupUI() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", image: UIImage(systemName: "house.fill")?.withTintColor(.white), target: self, action: #selector(rightBarButtonTapped))
         previewStackView.layer.cornerRadius = 8
         previewStackView.layer.borderColor = UIColor.brown.cgColor
         previewStackView.layer.borderWidth = 2
         yearLabelView.title = "2013"
         budgetCategoryLabelView.textAlignment = .left
-    }
-
-    @objc func rightBarButtonTapped() {
-        navigationController?.popToRootViewController(animated: true)
     }
 
     func setDataToUI() {

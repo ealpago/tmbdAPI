@@ -15,9 +15,20 @@ class SearchViewController: BaseViewController<SearchViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.setupTableView(with: tableView)
+        viewModel.reloadTableView = {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
         viewModel.popularMovies {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+            }
+        }
+        viewModel.selectedCell = { id in
+            if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController{
+                vc.movieDetailID = id
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField

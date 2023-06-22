@@ -19,8 +19,9 @@ class UpcomingViewController: BaseViewController<UpcomingViewModel> {
                 self.tableView.reloadData()
             }
         }
-        viewModel.selectedCell = {
+        viewModel.selectedCell = { id in
             if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController{
+                vc.movieDetailID = id
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

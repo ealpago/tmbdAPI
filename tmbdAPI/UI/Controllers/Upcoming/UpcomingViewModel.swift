@@ -8,7 +8,7 @@
 import UIKit
 
 class UpcomingViewModel: BaseViewModel {
-    var selectedCell:()->() = {}
+    var selectedCell:(Int)->() = {id in}
 
     var upcommingArray: [UpcomingMoviesResults] = []
     var collectionViewCellModelArray:[CellModel] = []
@@ -55,6 +55,7 @@ extension UpcomingViewModel: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCell()
+        let cellID = collectionCellModelItemsArray[indexPath.row].id
+        selectedCell(cellID ?? 0)
     }
 }

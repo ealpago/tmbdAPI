@@ -9,8 +9,9 @@ import UIKit
 
 class SearchViewModel: BaseViewModel {
 
-    var selectedCell:()->() = {}
-
+    var selectedCell:(Int)->() = {id in}
+    var textDidChange:()->() = {}
+    var reloadTableView:()->() = {}
     var deneme: [PopularMoviesResults] = []
     var searchedList: [SearchedMoviesResults] = []
 
@@ -34,15 +35,15 @@ class SearchViewModel: BaseViewModel {
         }
     }
 
-    func searchMovies(query: String, completion: @escaping()->()) {
+    func searchMovies(query: String) {
         NetworkManager.service.request(requestRoute: .searchMovie(query: query), responseModel: SearchedMovies.self) { [weak self] details in
             guard let result = details.results else {return}
             guard let self = self else {return}
 
-//            let searchResult = result.filter {
-//
-//            }
-
+            searchedList = result
+            DispatchQueue.main.async {
+                self.reloadTableView()
+            }
         }
     }
 }
@@ -66,6 +67,11 @@ extension SearchViewModel: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellModel = collectionCellModelItemsArray[indexPath.row]
+        selectedCell(cellModel.id ?? 0)
+    }
 }
 
 extension SearchViewModel: UISearchBarDelegate {
@@ -78,5 +84,6 @@ extension SearchViewModel: UISearchBarDelegate {
         guard searchText.trimmingCharacters(in: .whitespacesAndNewlines).count > 2 else {
             return
         }
+        searchMovies(query: searchText)
     }
 }

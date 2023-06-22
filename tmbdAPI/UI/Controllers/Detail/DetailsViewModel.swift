@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailViewModel: BaseViewModel {
-    var recommendedMovieTapped:()->() = {}
+    var recommendedMovieTapped:(Int)->() = {id in}
     var reloadCollectionViewData:()->() = {}
     var movieDetail: MovieDetail?
     var movieCast: MovieCredits?
@@ -108,7 +108,8 @@ extension DetailViewModel: UICollectionViewDelegate, UICollectionViewDataSource 
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.tag == 1 {
-            recommendedMovieTapped()
+            let cellID = recommendationMoviesModelItems[indexPath.row].id ?? 0
+            recommendedMovieTapped(cellID)
         }
     }
 }
