@@ -18,6 +18,9 @@ extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        headerView.headerMovieButtonTapped = {id in
+            self.goToDetail(id)
+        }
         tableView.tableHeaderView = headerView
     }
 
