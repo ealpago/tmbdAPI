@@ -26,12 +26,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBOutlet private weak var yearLabelView: DetailInfoView!
     @IBOutlet private weak var countryLabelView: DetailInfoView!
     @IBOutlet private weak var timeLabelView: DetailInfoView!
-    @IBOutlet private weak var categoriesDetailStackView: UIStackView!
-    @IBOutlet private weak var firstCategoryLabelView: DetailInfoView!
-    @IBOutlet private weak var secondCategoryLabelView: DetailInfoView!
-    @IBOutlet private weak var thirdCategoryLabelView: DetailInfoView!
     @IBOutlet private weak var budgetCategoryLabelView: DetailInfoView!
-    @IBOutlet private weak var revenuesCategoryLabelView: DetailInfoView!
     @IBOutlet private weak var castCollectionView: UICollectionView!
     @IBOutlet private weak var recomendedCollectionView: UICollectionView!
 
@@ -39,19 +34,25 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTitle(title: "DR. Strange")
+        setTitle(title: "Detaylar")
         setupUI()
+        viewModel.takeData(movieID: 238)
         viewModel.setupCollectionView(with: castCollectionView)
         viewModel.setupCollectionView(with: recomendedCollectionView)
-        viewModel.takeData(movieID: 238)
         viewModel.reloadCollectionViewData = {
             DispatchQueue.main.async {
+                self.setDataToUI()
                 self.castCollectionView.reloadData()
                 self.recomendedCollectionView.reloadData()
             }
         }
         viewModel.recommendedMovieTapped = {
             if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
+                DispatchQueue.main.async {
+                    self.setDataToUI()
+                    self.castCollectionView.reloadData()
+                    self.recomendedCollectionView.reloadData()
+                }
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
@@ -67,6 +68,27 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
         previewStackView.layer.borderWidth = 2
         yearLabelView.title = "2013"
         budgetCategoryLabelView.textAlignment = .left
-        revenuesCategoryLabelView.textAlignment = .left
+    }
+
+    func setDataToUI() {
+        if let data = viewModel.movieDetail {
+            titleLabel.text = data.title
+            descriptionLabel.text = data.overview
+            yearLabelView.title = data.releaseDate ?? ""
+            if let country = data.productionCompanies?.first?.originCountry {
+                countryLabelView.title = "\(country)"
+            }
+            if let runTime = data.runtime {
+                timeLabelView.title = "\(runTime)min"
+            }
+            if let budget = data.budget {
+                budgetCategoryLabelView.title = "Bütçe: \(budget)$"
+            }
+            DispatchQueue.main.async {
+                let characterImageUrlPath = data.posterPath ?? ""
+                guard let characterImageURL = URL(string: "https://image.tmdb.org/t/p/w500/"+characterImageUrlPath) else {return}
+                self.imageView?.downloaded(from: characterImageURL)
+            }
+        }
     }
 }

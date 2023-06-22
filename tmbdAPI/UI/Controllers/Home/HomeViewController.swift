@@ -15,8 +15,10 @@ class HomeViewController: BaseViewController<HomeViewModel> {
         super.viewDidLoad()
         setTitle(title: "Ana Sayfa")
         viewModel.setupTableView(with: tableView, view: view)
-        viewModel.goToDetail = {
+        viewModel.goToDetail = { id in
             if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
+                vc.movieDetailID = id
+                print(id)
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

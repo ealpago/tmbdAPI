@@ -11,7 +11,7 @@ struct MovieDetail: Codable {
 
     var adult: Bool?
     var backdropPath: String?
-    var belongsToCollection: String?
+    var belongsToCollection: BelongsToCollection?
     var budget: Int?
     var genres: [Genre]?
     var homepage: String?
@@ -67,7 +67,7 @@ struct MovieDetail: Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         adult = try values.decodeIfPresent(Bool.self, forKey: .adult)
         backdropPath = try values.decodeIfPresent(String.self, forKey: .backdropPath)
-        belongsToCollection = try values.decodeIfPresent(String.self, forKey: .belongsToCollection)
+        belongsToCollection = try values.decodeIfPresent(BelongsToCollection.self, forKey: .belongsToCollection)
         budget = try values.decodeIfPresent(Int.self, forKey: .budget)
         genres = try values.decodeIfPresent([Genre].self, forKey: .genres)
         homepage = try values.decodeIfPresent(String.self, forKey: .homepage)

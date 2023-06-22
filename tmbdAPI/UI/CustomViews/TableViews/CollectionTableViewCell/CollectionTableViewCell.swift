@@ -20,7 +20,7 @@ class CollectionTableViewCell: UITableViewCell {
     var collection4ViewCellModelArray:[CellModel] = []
     var collection4CellModelItemsArray:[CellModelItems] = []
 
-    var collectionViewTapped:()->() = {}
+    var collectionViewTapped:(Int)->() = {movieID in}
 
     var tableSection = 0
     
@@ -173,7 +173,8 @@ extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionViewTapped()
+        let id = collectionCellModelItemsArray[indexPath.row].id
+        collectionViewTapped(id ?? 0)
     }
 }
 

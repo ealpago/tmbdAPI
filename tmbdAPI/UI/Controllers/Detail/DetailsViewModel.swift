@@ -13,6 +13,8 @@ class DetailViewModel: BaseViewModel {
     var movieDetail: MovieDetail?
     var movieCast: MovieCredits?
     var recommendedMovies: [RecommendationResults] = []
+    var recommendationMoviesModel:[CellModel] = []
+    var recommendationMoviesModelItems:[CellModelItems] = []
 
 
     func takeData(movieID: Int) {
@@ -58,6 +60,13 @@ class DetailViewModel: BaseViewModel {
         NetworkManager.service.request(requestRoute: .movieRecommendations(movieID: movieID), responseModel: MovieRecommendations.self) { details in
             guard let results = details.results else {return}
             self.recommendedMovies = results
+
+            self.recommendationMoviesModelItems = results.compactMap { movies in
+                CellModelItems(id: movies.id, name: movies.title, image: movies.posterPath, description: movies.overview, vote: movies.voteAverage, makingYear: movies.releaseDate, makingCountry: "deneme", duration: "213", budget: "2M", revenue: "3M", producer: "DENEME", writer: "DENEME2")
+            }
+
+            self.recommendationMoviesModel.append(CellModel(items: self.recommendationMoviesModelItems))
+
             completion()
         }
     }
@@ -83,11 +92,16 @@ extension DetailViewModel: UICollectionViewDelegate, UICollectionViewDataSource 
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CastCollectionViewCell.identifier, for: indexPath) as? CastCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            if let cast = movieCast?.cast?[indexPath.row] {
+                cell.setupUI(collectionCast: cast)
+            }
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionViewCell.identifier, for: indexPath) as? MoviesCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            let cellModel = recommendationMoviesModelItems[indexPath.row]
+            cell.setupCell(cellModel: cellModel)
             return cell
         }
     }

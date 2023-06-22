@@ -9,7 +9,7 @@ import UIKit
 
 
 final class HomeViewModel:BaseViewModel {
-    var goToDetail:()->() = {}
+    var goToDetail:(Int)->() = {id in}
 }
 
 extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
@@ -42,8 +42,8 @@ extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as? CollectionTableViewCell {
             let section = indexPath.section
             cell.tableSection = section
-            cell.collectionViewTapped = {
-                self.goToDetail()
+            cell.collectionViewTapped = { movieID in
+                self.goToDetail(movieID)
             }
             return cell
         }

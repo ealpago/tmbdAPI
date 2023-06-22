@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3L-I9-khU" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="788.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="688.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-b3-1F1">
-                                                <rect key="frame" x="8" y="0.0" width="377" height="788.66666666666663"/>
+                                                <rect key="frame" x="8" y="0.0" width="377" height="688.66666666666663"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FPh-js-wrz">
                                                         <rect key="frame" x="0.0" y="0.0" width="377" height="160"/>
@@ -119,7 +119,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-LR-l3J">
-                                                        <rect key="frame" x="0.0" y="180" width="377" height="180"/>
+                                                        <rect key="frame" x="0.0" y="180" width="377" height="80"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C34-Na-d4h">
                                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="30"/>
@@ -148,36 +148,14 @@
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SlQ-6e-JgD">
-                                                                <rect key="frame" x="0.0" y="50" width="377" height="30"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSp-Ne-Rk6" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="30"/>
-                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7C4-JZ-NI8" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
-                                                                        <rect key="frame" x="128.33333333333334" y="0.0" width="120.33333333333334" height="30"/>
-                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHC-RT-Grt" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
-                                                                        <rect key="frame" x="256.66666666666669" y="0.0" width="120.33333333333331" height="30"/>
-                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOm-jc-qVp" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="100" width="377" height="30"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3j-Za-gHs" customClass="DetailInfoView" customModule="tmbdAPI" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="150" width="377" height="30"/>
+                                                                <rect key="frame" x="0.0" y="50" width="377" height="30"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZOB-1d-XTY">
-                                                        <rect key="frame" x="0.0" y="380" width="377" height="408.66666666666674"/>
+                                                        <rect key="frame" x="0.0" y="280" width="377" height="408.66666666666674"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tfL-yh-8Ue">
                                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="204.33333333333334"/>
@@ -268,12 +246,10 @@
                     <connections>
                         <outlet property="budgetCategoryLabelView" destination="BOm-jc-qVp" id="nFW-tN-21p"/>
                         <outlet property="castCollectionView" destination="XEW-2f-zhV" id="0Nm-Iu-dCJ"/>
-                        <outlet property="categoriesDetailStackView" destination="SlQ-6e-JgD" id="rYh-vO-p7W"/>
                         <outlet property="contentView" destination="v3L-I9-khU" id="EDu-QV-EvM"/>
                         <outlet property="countryLabelView" destination="hUR-2M-gX8" id="DSq-kc-wo4"/>
                         <outlet property="descriptionLabel" destination="aD4-Zx-Vev" id="KOt-ER-1E6"/>
                         <outlet property="detailsStackView" destination="G1N-LR-l3J" id="qIl-7M-lMF"/>
-                        <outlet property="firstCategoryLabelView" destination="bSp-Ne-Rk6" id="yzi-mJ-iZC"/>
                         <outlet property="headTitlesStackView" destination="05B-A8-HKF" id="Htp-1I-c3H"/>
                         <outlet property="imageContainerView" destination="eEy-U2-0GZ" id="EEU-nD-OuJ"/>
                         <outlet property="imageView" destination="k5f-ty-Ugh" id="Zie-EJ-9HT"/>
@@ -282,10 +258,7 @@
                         <outlet property="percentLabel" destination="SCq-cg-58w" id="mib-ie-qi2"/>
                         <outlet property="previewStackView" destination="FPh-js-wrz" id="kU8-lo-Cw2"/>
                         <outlet property="recomendedCollectionView" destination="PIM-J3-e42" id="cQA-oZ-J2N"/>
-                        <outlet property="revenuesCategoryLabelView" destination="S3j-Za-gHs" id="qUJ-pJ-R6g"/>
                         <outlet property="scrollView" destination="k0v-Ir-15v" id="zRR-gO-GK1"/>
-                        <outlet property="secondCategoryLabelView" destination="7C4-JZ-NI8" id="sNJ-bz-kTT"/>
-                        <outlet property="thirdCategoryLabelView" destination="yHC-RT-Grt" id="oVc-Dj-hoJ"/>
                         <outlet property="timeLabelView" destination="hst-O7-jLv" id="NoQ-Jq-PU1"/>
                         <outlet property="titleContainerView" destination="Yva-Mw-av3" id="BBC-ap-1X0"/>
                         <outlet property="titleLabel" destination="9vZ-4u-FrN" id="xnJ-Ul-Xl5"/>
