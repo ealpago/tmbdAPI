@@ -31,6 +31,7 @@ class SearchViewModel: BaseViewModel {
 
             self.popularMoviesArray = sortedArray
             completion()
+            self.delegate?.stopLoading()
         }
     }
 
@@ -86,8 +87,17 @@ extension SearchViewModel: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard searchText.trimmingCharacters(in: .whitespacesAndNewlines).count > 2 else {
-            return
+            return popularMovies() {
+                self.reloadTableView()
+            }
+
         }
         searchMovies(query: searchText)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        popularMovies() {
+            self.reloadTableView()
+        }
     }
 }
