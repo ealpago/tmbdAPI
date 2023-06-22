@@ -63,11 +63,16 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     }
 
     func setupUI() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", image: UIImage(systemName: "house.fill")?.withTintColor(.white), target: self, action: #selector(rightBarButtonTapped))
         previewStackView.layer.cornerRadius = 8
         previewStackView.layer.borderColor = UIColor.brown.cgColor
         previewStackView.layer.borderWidth = 2
         yearLabelView.title = "2013"
         budgetCategoryLabelView.textAlignment = .left
+    }
+
+    @objc func rightBarButtonTapped() {
+        navigationController?.popToRootViewController(animated: true)
     }
 
     func setDataToUI() {
