@@ -45,5 +45,8 @@ class LoginViewController: BaseViewController<LoginViewModel> {
 
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         print("signUp")
+        if let vc = "SignUpStoryboard".viewController(identifier: SignUpViewController.identifier) as? SignUpViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
