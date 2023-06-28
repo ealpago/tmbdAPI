@@ -3,4 +3,114 @@
    uuid = "6779C058-5671-4B81-BDCD-45E1AC617AE5"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3F0C6B3-A02C-4818-865E-FF22B528D59D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Upcoming/UpcomingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "UpcomingViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D3F0C6B3-A02C-4818-865E-FF22B528D59D - 1e9746daf2775d69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; () in variable initialization expression of tmbdAPI.UpcomingViewModel.selectedCell : (Swift.Int) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Upcoming/UpcomingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "D3F0C6B3-A02C-4818-865E-FF22B528D59D - d18a9a8f360c2428"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.UpcomingViewModel.selectedCell.getter : (Swift.Int) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Upcoming/UpcomingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "D3F0C6B3-A02C-4818-865E-FF22B528D59D - ca2f35e3ac39a00c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.UpcomingViewModel.selectedCell.setter : (Swift.Int) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Upcoming/UpcomingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "D3F0C6B3-A02C-4818-865E-FF22B528D59D - 62d825aadfc89b31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.UpcomingViewModel.selectedCell.modify : (Swift.Int) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Upcoming/UpcomingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3F0C6B3-A02C-4818-865E-FF22B528D59D - cfb94201e7444ffa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.UpcomingViewModel.selectedCell.modify : (Swift.Int) -&gt; () with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Upcoming/UpcomingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "D3F0C6B3-A02C-4818-865E-FF22B528D59D - 2f99a1886af98dec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.UpcomingViewModel.init() -&gt; tmbdAPI.UpcomingViewModel"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Upcoming/UpcomingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

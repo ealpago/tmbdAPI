@@ -94,10 +94,4 @@ extension SearchViewModel: UISearchBarDelegate {
         }
         searchMovies(query: searchText)
     }
-
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        popularMovies() {
-            self.reloadTableView()
-        }
-    }
 }

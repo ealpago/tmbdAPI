@@ -16,6 +16,7 @@ class SearchViewController: BaseViewController<SearchViewModel> {
         super.viewDidLoad()
         viewModel.setupTableView(with: tableView)
         viewModel.setupSearchBar(with: searchBar)
+        self.tableView.keyboardDismissMode = .onDrag
         viewModel.reloadTableView = {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
