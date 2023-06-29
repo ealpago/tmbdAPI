@@ -11,7 +11,7 @@ import FirebaseAuth
 
 
 class SignUpViewController: BaseViewController<SignUpViewModel> {
-    
+
     @IBOutlet private weak var nameView: TextFieldView!
     @IBOutlet private weak var surnameView: TextFieldView!
     @IBOutlet private weak var mailView: TextFieldView!
@@ -22,10 +22,10 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
     @IBOutlet private weak var signUpLabel: UILabel!
     @IBOutlet private weak var mainStackView: UIStackView!
     @IBOutlet private weak var registerButton: UIButton!
-    
+
     private var email: String?
     private var password: String?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitle()
@@ -34,13 +34,14 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
         surnameView.registerSection = .surname
         mailView.registerSection = .email
         passwordView.registerSection = .password
+        registerButton.layer.cornerRadius = 20
         self.scrollView.keyboardDismissMode = .onDrag
     }
-    
+
     override func setViewModel() {
         viewModel = SignUpViewModel()
     }
-    
+
     func registerEmailAndPassword() {
         if let email = email, let password = password {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -52,7 +53,7 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
             }
         }
     }
-    
+
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         registerEmailAndPassword()
     }
@@ -70,7 +71,7 @@ case name
 case surname
 case email
 case password
-    
+
     var placeholder: String {
         switch self {
         case .name:
@@ -83,7 +84,7 @@ case password
             return "Şifre"
         }
     }
-    
+
     var error: String {
         switch self {
         case .name, .surname:

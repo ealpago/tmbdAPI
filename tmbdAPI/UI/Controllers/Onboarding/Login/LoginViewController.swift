@@ -13,8 +13,9 @@ class LoginViewController: BaseViewController<LoginViewModel> {
 
     @IBOutlet private weak var topImageView: UIImageView!
     @IBOutlet private weak var mainStackView: UIStackView!
-    @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var emailView: TextFieldView!
+    @IBOutlet private weak var passwordView: TextFieldView!
+    @IBOutlet private weak var buttonsStackView: UIStackView!
     @IBOutlet private weak var signUpButton: UIButton!
     @IBOutlet private weak var loginButton: UIButton!
 
@@ -31,20 +32,8 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     }
 
     private func setupUI() {
-        emailTextField.layer.borderWidth = 2
-        emailTextField.layer.borderColor = UIColor.white.cgColor
-        emailTextField.layer.cornerRadius = 20
-
-        emailTextField.attributedPlaceholder = NSAttributedString(
-            string: "E-Mail",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-        )
-        emailTextField.addTarget(self, action: #selector(emailDidEnd(_:)), for: .editingDidEnd)
-
-        passwordTextField.layer.borderWidth = 2
-        passwordTextField.layer.borderColor = UIColor.white.cgColor
-        passwordTextField.layer.cornerRadius = 20
-
+        emailView.loginSection = .email
+        passwordView.loginSection = .password
         loginButton.layer.cornerRadius = 20
     }
 
@@ -59,7 +48,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         }
     }
 
-    func registerEmailAndPassword() {
+    func loginEmailAndPassword() {
         if let email = email, let password = password {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
 
@@ -77,3 +66,27 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         }
     }
 }
+
+enum LoginCases: CaseIterable {
+case email
+case password
+
+    var placeholder: String {
+        switch self {
+        case .email:
+            return "E-Mail"
+        case .password:
+            return "Şifre"
+        }
+    }
+
+    var error: String {
+        switch self {
+        case .email:
+            return "Geçersiz mail adresi"
+        case .password:
+            return "Şifre en az 6 karakter içermelidir"
+        }
+    }
+}
+
