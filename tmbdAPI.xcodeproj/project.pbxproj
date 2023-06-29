@@ -66,6 +66,8 @@
 		D11D5CD12A4CE8BC00D4D194 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CD02A4CE8BC00D4D194 /* SignUpViewController.swift */; };
 		D11D5CD32A4CE8CA00D4D194 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CD22A4CE8CA00D4D194 /* SignUpViewModel.swift */; };
 		D11D5CD52A4CE8DF00D4D194 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11D5CD42A4CE8DF00D4D194 /* SignUpStoryboard.storyboard */; };
+		D11D5CD82A4DD46200D4D194 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CD72A4DD46200D4D194 /* TextFieldView.swift */; };
+		D11D5CDA2A4DD47900D4D194 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11D5CD92A4DD47900D4D194 /* TextFieldView.xib */; };
 		D14C36ED2A42FC6200F3554E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36EC2A42FC6200F3554E /* BaseViewController.swift */; };
 		D14C36F12A42FCCA00F3554E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */; };
 		D14C36F42A430D0300F3554E /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F32A430D0300F3554E /* CellModel.swift */; };
@@ -178,6 +180,8 @@
 		D11D5CD02A4CE8BC00D4D194 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D11D5CD22A4CE8CA00D4D194 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D11D5CD42A4CE8DF00D4D194 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		D11D5CD72A4DD46200D4D194 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		D11D5CD92A4DD47900D4D194 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
 		D14C36EC2A42FC6200F3554E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D14C36F32A430D0300F3554E /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -457,6 +461,15 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		D11D5CD62A4DD44900D4D194 /* TextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				D11D5CD72A4DD46200D4D194 /* TextFieldView.swift */,
+				D11D5CD92A4DD47900D4D194 /* TextFieldView.xib */,
+			);
+			path = TextFieldView;
+			sourceTree = "<group>";
+		};
 		D14C36EB2A42FC3E00F3554E /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +521,7 @@
 		D17BC93B2A3912640071B9A2 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				D11D5CD62A4DD44900D4D194 /* TextFieldView */,
 				D14C370B2A43ADB300F3554E /* DetailInfoView */,
 				D1F048722A3E10EC005D6965 /* HeaderView */,
 				D17BC93D2A39127B0071B9A2 /* TableViews */,
@@ -851,6 +865,7 @@
 				D17BC9452A3913330071B9A2 /* DetailedTableViewCell.xib in Resources */,
 				D14C370F2A43ADEF00F3554E /* DetailInfoView.xib in Resources */,
 				D1F048762A3E1109005D6965 /* HeaderView.xib in Resources */,
+				D11D5CDA2A4DD47900D4D194 /* TextFieldView.xib in Resources */,
 				D14C371E2A43C28F00F3554E /* CastCollectionViewCell.xib in Resources */,
 				D11D5CCE2A4CCD8500D4D194 /* LoginStoryboard.storyboard in Resources */,
 				D1074DD12A38FFF200906579 /* DetailsStoryboard.storyboard in Resources */,
@@ -994,6 +1009,7 @@
 				D1074DC22A38FC2100906579 /* HomeViewController.swift in Sources */,
 				D1F048A42A4103BA005D6965 /* Crew.swift in Sources */,
 				D14C37202A43DB4F00F3554E /* BelongToCollection.swift in Sources */,
+				D11D5CD82A4DD46200D4D194 /* TextFieldView.swift in Sources */,
 				D14C36F62A430D6900F3554E /* CellModelItems.swift in Sources */,
 				D14C371D2A43C28F00F3554E /* CastCollectionViewCell.swift in Sources */,
 				D1F048972A4101D4005D6965 /* Genre.swift in Sources */,

@@ -87,6 +87,11 @@ open class BaseViewController<T:BaseViewModel>: UIViewController, BaseViewModelP
         return emailPredicate.evaluate(with: email)
     }
 
+    func isValidName(_ name: String) -> Bool {
+        let nameRegex = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
+        let namePredicate = NSPredicate(format: "SELF MATCHES %@", nameRegex)
+        return namePredicate.evaluate(with: name)
+    }
 }
 
 extension UINavigationController {
