@@ -72,6 +72,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
                 } else {
                     if let vc = "BaseTabbarStoryboard".viewController(identifier: BaseTabBarController.identifier) as? BaseTabBarController {
                         UserDefaults.user = email
+                        vc.navigationItem.setHidesBackButton(true, animated: true)
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                 }

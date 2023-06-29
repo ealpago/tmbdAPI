@@ -14,6 +14,8 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.setupTableView(with: tableView, view: view)
+        changeNavigationBar(navigationBackgroundColor: .clear, font: UIFont())
+        setTitle(title: "Ana Sayfa", backVisible: false)
         viewModel.goToDetail = { id in
             if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
                 vc.movieDetailID = id

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Arama" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3d-UW-n5x">
-                                <rect key="frame" x="0.0" y="69" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="113" width="393" height="56"/>
                                 <color key="tintColor" systemColor="systemBrownColor"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -26,7 +26,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f57-aT-INf">
-                                <rect key="frame" x="0.0" y="135" width="393" height="717"/>
+                                <rect key="frame" x="0.0" y="179" width="393" height="673"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -42,6 +42,7 @@
                             <constraint firstItem="h3d-UW-n5x" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="X0Z-DT-QCd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zi1-fD-vit"/>
                     <connections>
                         <outlet property="searchBar" destination="h3d-UW-n5x" id="R18-mg-teJ"/>
                         <outlet property="tableView" destination="f57-aT-INf" id="pHG-lR-xYc"/>
@@ -49,7 +50,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-34"/>
+            <point key="canvasLocation" x="1002.2900763358779" y="-34.507042253521128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YLu-0P-Qig">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ecj-qn-gxW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fAi-cR-dzN">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="inm-ml-fPO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2n-1e-ZwP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75.572519083969468" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
