@@ -9,7 +9,7 @@ import Foundation
 
 enum UserDefaultsKeys: String {
     case loggedUser = "loggedUser"
-    case userName = "userName"
+    case user = "user"
 }
 
 extension UserDefaults {
@@ -31,6 +31,21 @@ extension UserDefaults {
             }else {
                 guard let data = try? JSONEncoder().encode(newValue) else {return}
                 standard.set(data, forKey: UserDefaultsKeys.loggedUser.rawValue)
+                standard.synchronize()
+            }
+        }
+    }
+
+    class var user:String? {
+        get {
+            return standard.string(forKey: UserDefaultsKeys.user.rawValue)
+        }
+        set {
+            if newValue == nil {
+                standard.removeObject(forKey: UserDefaultsKeys.user.rawValue)
+                standard.synchronize()
+            }else {
+                standard.set(newValue, forKey: UserDefaultsKeys.user.rawValue)
                 standard.synchronize()
             }
         }

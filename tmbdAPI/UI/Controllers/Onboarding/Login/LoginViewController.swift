@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import FirebaseCore
+import FirebaseFirestore
 import FirebaseAuth
 
 class LoginViewController: BaseViewController<LoginViewModel> {
@@ -25,6 +27,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+
     }
 
     override func setViewModel() {
@@ -35,10 +38,45 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         emailView.loginSection = .email
         passwordView.loginSection = .password
         loginButton.layer.cornerRadius = 20
+        setButtonEnable()
+        emailView.textFieldDidEnd = { text in
+            self.email = text
+            self.setButtonEnable()
+        }
+        passwordView.textFieldDidEnd = { text in
+            self.password = text
+            self.setButtonEnable()
+        }
+    }
+
+    private func setButtonEnable() {
+        DispatchQueue.main.async {
+            self.loginButton.isEnabled = self.checkInformation()
+        }
+    }
+
+    private func checkInformation() -> Bool {
+        var result: Bool = true
+        result = result && isValidEmail(emailView.textField.text ?? "")
+        result = result && isValidPassword(passwordView.textField.text ?? "")
+
+        return result
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         print("login")
+        if let email = email, let password = password {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    if let vc = "BaseTabbarStoryboard".viewController(identifier: BaseTabBarController.identifier) as? BaseTabBarController {
+                        UserDefaults.user = email
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+        }
     }
 
     @IBAction func signUpButtonTapped(_ sender: UIButton) {

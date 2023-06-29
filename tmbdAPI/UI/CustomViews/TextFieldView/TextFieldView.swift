@@ -73,7 +73,7 @@ class TextFieldView: UIView {
 
             if login == .password {
                 if let text = textField.text {
-                    error = isValidPassword(text) ? 0 : 1
+                    error = isValidPassword(text) ? 1 : 0
                 }
             }
         } else {

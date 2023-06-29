@@ -68,7 +68,6 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
 
     func registerEmailAndPassword() {
         if let email = email, let password = password, let name = name, let surname = surname {
-            UserDefaults.loggedUser = LoggedUser(name: name, surname: surname, email: email)
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error?.localizedDescription {
                     print(error)
