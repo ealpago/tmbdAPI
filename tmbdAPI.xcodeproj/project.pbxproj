@@ -68,6 +68,8 @@
 		D11D5CD82A4DD46200D4D194 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CD72A4DD46200D4D194 /* TextFieldView.swift */; };
 		D11D5CDA2A4DD47900D4D194 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11D5CD92A4DD47900D4D194 /* TextFieldView.xib */; };
 		D11D5CDD2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11D5CDC2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard */; };
+		D11D5CDF2A4E1EBE00D4D194 /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CDE2A4E1EBE00D4D194 /* UserDefaults+Ext.swift */; };
+		D11D5CE12A4E1F3A00D4D194 /* LoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CE02A4E1F3A00D4D194 /* LoggedUser.swift */; };
 		D14C36ED2A42FC6200F3554E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36EC2A42FC6200F3554E /* BaseViewController.swift */; };
 		D14C36F12A42FCCA00F3554E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */; };
 		D14C36F42A430D0300F3554E /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F32A430D0300F3554E /* CellModel.swift */; };
@@ -182,6 +184,8 @@
 		D11D5CD72A4DD46200D4D194 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		D11D5CD92A4DD47900D4D194 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
 		D11D5CDC2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseTabbarStoryboard.storyboard; sourceTree = "<group>"; };
+		D11D5CDE2A4E1EBE00D4D194 /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
+		D11D5CE02A4E1F3A00D4D194 /* LoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedUser.swift; sourceTree = "<group>"; };
 		D14C36EC2A42FC6200F3554E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D14C36F32A430D0300F3554E /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 			children = (
 				D14C36F22A430CF100F3554E /* CellModels */,
 				D1F0488F2A4100A6005D6965 /* MoviesResponseModels */,
+				D11D5CE02A4E1F3A00D4D194 /* LoggedUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -601,6 +606,7 @@
 				D1F048792A3F501C005D6965 /* UIView+Ext.swift */,
 				D14C36F72A432FDD00F3554E /* UIImageView+Ext.swift */,
 				D14C36F92A4343A600F3554E /* UIColor+Ext.swift */,
+				D11D5CDE2A4E1EBE00D4D194 /* UserDefaults+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1005,6 +1011,7 @@
 				D1A176CC2A3DE9A4000D24E2 /* MoviesCollectionViewCell.swift in Sources */,
 				D1F048632A3DF05B005D6965 /* CollectionTableViewCell.swift in Sources */,
 				D1F048912A4100C2005D6965 /* UpcomingMovies.swift in Sources */,
+				D11D5CE12A4E1F3A00D4D194 /* LoggedUser.swift in Sources */,
 				D1F0487A2A3F501C005D6965 /* UIView+Ext.swift in Sources */,
 				D1F048A92A410453005D6965 /* Keyword.swift in Sources */,
 				D1F0487C2A40ED45005D6965 /* NetworkServices.swift in Sources */,
@@ -1018,6 +1025,7 @@
 				D1F048A42A4103BA005D6965 /* Crew.swift in Sources */,
 				D14C37202A43DB4F00F3554E /* BelongToCollection.swift in Sources */,
 				D11D5CD82A4DD46200D4D194 /* TextFieldView.swift in Sources */,
+				D11D5CDF2A4E1EBE00D4D194 /* UserDefaults+Ext.swift in Sources */,
 				D14C36F62A430D6900F3554E /* CellModelItems.swift in Sources */,
 				D14C371D2A43C28F00F3554E /* CastCollectionViewCell.swift in Sources */,
 				D1F048972A4101D4005D6965 /* Genre.swift in Sources */,
