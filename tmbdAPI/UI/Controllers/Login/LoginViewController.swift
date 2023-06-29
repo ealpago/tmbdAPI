@@ -18,6 +18,9 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     @IBOutlet private weak var signUpButton: UIButton!
     @IBOutlet private weak var loginButton: UIButton!
 
+    private var email: String?
+    private var password: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -31,6 +34,12 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         emailTextField.layer.borderWidth = 2
         emailTextField.layer.borderColor = UIColor.white.cgColor
         emailTextField.layer.cornerRadius = 20
+
+        emailTextField.attributedPlaceholder = NSAttributedString(
+            string: "E-Mail",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+        )
+        emailTextField.addTarget(self, action: #selector(emailDidEnd(_:)), for: .editingDidEnd)
 
         passwordTextField.layer.borderWidth = 2
         passwordTextField.layer.borderColor = UIColor.white.cgColor
@@ -47,6 +56,24 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         print("signUp")
         if let vc = "SignUpStoryboard".viewController(identifier: SignUpViewController.identifier) as? SignUpViewController {
             navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
+    func registerEmailAndPassword() {
+        if let email = email, let password = password {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+
+            }
+        }
+    }
+
+    @objc func emailDidEnd(_ textField: UITextField) {
+        if let text = textField.text {
+            if isValidEmail(text) {
+                print("true")
+            } else {
+                print("false")
+            }
         }
     }
 }
