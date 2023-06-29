@@ -14,6 +14,7 @@ class TextFieldView: UIView {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
 
+    var textFieldDidEnd:(String?)->() = {text in}
     var registerSection: RegisterCases? {
         didSet {
             if let register = registerSection {
@@ -71,8 +72,8 @@ class TextFieldView: UIView {
             }
 
             if login == .password {
-                if let count = textField.text?.count {
-                    error = count < 6 ? 0 : 1
+                if let text = textField.text {
+                    error = isValidPassword(text) ? 0 : 1
                 }
             }
         } else {
@@ -93,13 +94,15 @@ class TextFieldView: UIView {
                 }
             }
             if registerSection == .password {
-                if let count = textField.text?.count {
-                    error = count < 6 ? 0 : 1
+                if let text = textField.text {
+                    error = isValidPassword(text) ? 1 : 0
                 }
             }
         }
 
         errorLabel.isHidden = error == 1 ? true : false
+        textField.layer.borderColor = error == 1 ? UIColor.white.cgColor : UIColor.red.cgColor
+        textFieldDidEnd(textField.text)
     }
 
     func isValidEmail(_ email: String) -> Bool {
@@ -112,6 +115,14 @@ class TextFieldView: UIView {
         let nameRegex = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
         let namePredicate = NSPredicate(format: "SELF MATCHES %@", nameRegex)
         return namePredicate.evaluate(with: name)
+    }
+
+    func isValidPassword(_ password: String) -> Bool {
+        if password.count < 6 {
+             return false
+        } else {
+            return true
+        }
     }
 }
 

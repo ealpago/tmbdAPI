@@ -92,6 +92,14 @@ open class BaseViewController<T:BaseViewModel>: UIViewController, BaseViewModelP
         let namePredicate = NSPredicate(format: "SELF MATCHES %@", nameRegex)
         return namePredicate.evaluate(with: name)
     }
+
+    func isValidPassword(_ password: String) -> Bool {
+        if password.count < 6 {
+             return false
+        } else {
+            return true
+        }
+    }
 }
 
 extension UINavigationController {
