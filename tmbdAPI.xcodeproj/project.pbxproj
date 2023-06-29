@@ -62,12 +62,12 @@
 		D11D5CC72A4B81E300D4D194 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D11D5CC62A4B81E300D4D194 /* FirebaseStorageCombine-Community */; };
 		D11D5CCA2A4CCD1200D4D194 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CC92A4CCD1200D4D194 /* LoginViewController.swift */; };
 		D11D5CCC2A4CCD2000D4D194 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CCB2A4CCD2000D4D194 /* LoginViewModel.swift */; };
-		D11D5CCE2A4CCD8500D4D194 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11D5CCD2A4CCD8500D4D194 /* LoginStoryboard.storyboard */; };
 		D11D5CD12A4CE8BC00D4D194 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CD02A4CE8BC00D4D194 /* SignUpViewController.swift */; };
 		D11D5CD32A4CE8CA00D4D194 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CD22A4CE8CA00D4D194 /* SignUpViewModel.swift */; };
 		D11D5CD52A4CE8DF00D4D194 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11D5CD42A4CE8DF00D4D194 /* SignUpStoryboard.storyboard */; };
 		D11D5CD82A4DD46200D4D194 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CD72A4DD46200D4D194 /* TextFieldView.swift */; };
 		D11D5CDA2A4DD47900D4D194 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11D5CD92A4DD47900D4D194 /* TextFieldView.xib */; };
+		D11D5CDD2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11D5CDC2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard */; };
 		D14C36ED2A42FC6200F3554E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36EC2A42FC6200F3554E /* BaseViewController.swift */; };
 		D14C36F12A42FCCA00F3554E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */; };
 		D14C36F42A430D0300F3554E /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F32A430D0300F3554E /* CellModel.swift */; };
@@ -176,12 +176,12 @@
 		D11D5C8F2A4B7F3F00D4D194 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D11D5CC92A4CCD1200D4D194 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D11D5CCB2A4CCD2000D4D194 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		D11D5CCD2A4CCD8500D4D194 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		D11D5CD02A4CE8BC00D4D194 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D11D5CD22A4CE8CA00D4D194 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D11D5CD42A4CE8DF00D4D194 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		D11D5CD72A4DD46200D4D194 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		D11D5CD92A4DD47900D4D194 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
+		D11D5CDC2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseTabbarStoryboard.storyboard; sourceTree = "<group>"; };
 		D14C36EC2A42FC6200F3554E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D14C36F32A430D0300F3554E /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -382,12 +382,11 @@
 		D1074DB22A3609CA00906579 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D11D5CCF2A4CE8A300D4D194 /* SignUp */,
 				D1074DB62A360A6000906579 /* Home */,
 				D1074DB42A360A3700906579 /* Upcoming */,
 				D1074DD32A390D8800906579 /* Search */,
 				D1074DB52A360A5400906579 /* Detail */,
-				D11D5CC82A4CCCAE00D4D194 /* Login */,
+				D11D5CDB2A4E196900D4D194 /* Onboarding */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -396,7 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				D1074D812A36093300906579 /* BaseTabBarController.swift */,
-				D1074D832A36093400906579 /* Main.storyboard */,
+				D11D5CDC2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard */,
 			);
 			path = BaseTabbar;
 			sourceTree = "<group>";
@@ -446,7 +445,7 @@
 			children = (
 				D11D5CC92A4CCD1200D4D194 /* LoginViewController.swift */,
 				D11D5CCB2A4CCD2000D4D194 /* LoginViewModel.swift */,
-				D11D5CCD2A4CCD8500D4D194 /* LoginStoryboard.storyboard */,
+				D1074D832A36093400906579 /* Main.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -468,6 +467,15 @@
 				D11D5CD92A4DD47900D4D194 /* TextFieldView.xib */,
 			);
 			path = TextFieldView;
+			sourceTree = "<group>";
+		};
+		D11D5CDB2A4E196900D4D194 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D11D5CC82A4CCCAE00D4D194 /* Login */,
+				D11D5CCF2A4CE8A300D4D194 /* SignUp */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		D14C36EB2A42FC3E00F3554E /* Base */ = {
@@ -867,7 +875,6 @@
 				D1F048762A3E1109005D6965 /* HeaderView.xib in Resources */,
 				D11D5CDA2A4DD47900D4D194 /* TextFieldView.xib in Resources */,
 				D14C371E2A43C28F00F3554E /* CastCollectionViewCell.xib in Resources */,
-				D11D5CCE2A4CCD8500D4D194 /* LoginStoryboard.storyboard in Resources */,
 				D1074DD12A38FFF200906579 /* DetailsStoryboard.storyboard in Resources */,
 				D1F048642A3DF05B005D6965 /* CollectionTableViewCell.xib in Resources */,
 				D1A176CD2A3DE9A5000D24E2 /* MoviesCollectionViewCell.xib in Resources */,
@@ -875,6 +882,7 @@
 				D1074D8A2A36093500906579 /* Assets.xcassets in Resources */,
 				D1074DCA2A38FFD300906579 /* HomeStoryboard.storyboard in Resources */,
 				D1074D852A36093400906579 /* Main.storyboard in Resources */,
+				D11D5CDD2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard in Resources */,
 				D11D5C902A4B7F3F00D4D194 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
