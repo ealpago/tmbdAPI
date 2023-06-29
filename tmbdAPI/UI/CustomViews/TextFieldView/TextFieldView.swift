@@ -19,9 +19,21 @@ class TextFieldView: UIView {
             if let register = registerSection {
                 textField.attributedPlaceholder = NSAttributedString(
                     string: register.placeholder,
-                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)]
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.8)]
                 )
                 errorLabel.text = register.error
+            }
+        }
+    }
+
+    var loginSection: LoginCases? {
+        didSet {
+            if let login = loginSection {
+                textField.attributedPlaceholder = NSAttributedString(
+                    string: login.placeholder,
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.8)]
+                )
+                errorLabel.text = login.error
             }
         }
     }
@@ -41,7 +53,7 @@ class TextFieldView: UIView {
         errorLabel.isHidden = true
         textField.delegate = self
         textField.layer.cornerRadius = 20
-        textField.layer.borderWidth = 1
+        textField.layer.borderWidth = 2
         textField.layer.borderColor = UIColor.white.cgColor
         textField.addTarget(self, action: #selector(didEndEditing(_:)), for: .editingDidEnd)
         addSubview(contentView)
@@ -51,27 +63,42 @@ class TextFieldView: UIView {
 
     @objc func didEndEditing(_ textField: UITextField) {
         var error: Int? = 1
-        if registerSection == .email {
-            if let text = textField.text {
-                error = isValidEmail(text) ? 1 : 0
+        if let login = loginSection {
+            if login == .email {
+                if let text = textField.text {
+                    error = isValidEmail(text) ? 1 : 0
+                }
             }
-        }
-        if registerSection == .name || registerSection == .surname {
-            if let text = textField.text {
-                if text.isEmpty {
-                    errorLabel.text = "Boş giriş yapılamaz"
-                    error = isValidLetter(text) ? 1 : 0
-                } else {
-                    errorLabel.text = registerSection?.error
-                    error = isValidLetter(text) ? 1 : 0
+
+            if login == .password {
+                if let count = textField.text?.count {
+                    error = count < 6 ? 0 : 1
+                }
+            }
+        } else {
+            if registerSection == .email {
+                if let text = textField.text {
+                    error = isValidEmail(text) ? 1 : 0
+                }
+            }
+            if registerSection == .name || registerSection == .surname {
+                if let text = textField.text {
+                    if text.isEmpty {
+                        errorLabel.text = "Boş giriş yapılamaz"
+                        error = isValidLetter(text) ? 1 : 0
+                    } else {
+                        errorLabel.text = registerSection?.error
+                        error = isValidLetter(text) ? 1 : 0
+                    }
+                }
+            }
+            if registerSection == .password {
+                if let count = textField.text?.count {
+                    error = count < 6 ? 0 : 1
                 }
             }
         }
-        if registerSection == .password {
-            if let count = textField.text?.count {
-                error = count < 6 ? 0 : 1
-            }
-        }
+
         errorLabel.isHidden = error == 1 ? true : false
     }
 
