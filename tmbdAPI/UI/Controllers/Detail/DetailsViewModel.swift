@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewModel: BaseViewModel {
     var recommendedMovieTapped:(Int?)->() = {id in}
+    var movieTapped:(Int?)->() = {id in}
     var reloadCollectionViewData:()->() = {}
     var movieDetail: MovieDetail?
     var movieCast: MovieCredits?
@@ -97,6 +98,7 @@ extension DetailViewModel: UICollectionViewDelegate, UICollectionViewDataSource 
             if let cast = movieCast?.cast?[indexPath.row] {
                 cell.setupUI(collectionCast: cast)
             }
+            cell.didCellTap = movieTapped
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionViewCell.identifier, for: indexPath) as? MoviesCollectionViewCell else {

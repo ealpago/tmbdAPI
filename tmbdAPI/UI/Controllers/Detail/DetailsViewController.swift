@@ -54,6 +54,12 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
                     self.recomendedCollectionView.reloadData()
                 }
         }
+        viewModel.movieTapped = { id in
+            if let vc = "ActorDetailStoryboard".viewController(identifier: ActorDetailViewController.identifier) as? ActorDetailViewController {
+                vc.personID = id
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 
     override func setViewModel() {
