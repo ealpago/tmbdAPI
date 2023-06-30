@@ -27,7 +27,10 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        clearTextField()
     }
 
     override func setViewModel() {
@@ -47,6 +50,11 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             self.password = text
             self.setButtonEnable()
         }
+    }
+
+    private func clearTextField() {
+        emailView.textField.text = ""
+        passwordView.textField.text = ""
     }
 
     private func setButtonEnable() {
@@ -89,9 +97,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
 
     func loginEmailAndPassword() {
         if let email = email, let password = password {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-
-            }
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in }
         }
     }
 

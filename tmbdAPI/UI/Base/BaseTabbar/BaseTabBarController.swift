@@ -14,10 +14,12 @@ enum TabBarConstant {
     static let upcomingStoryBoardID = "UpcomingViewController"
     static let searchStoryBoardName = "SearchStoryboard"
     static let searchStoryBoardID = "SearchViewController"
+    static let profileStoryBoardName = "ProfileStoryboard"
+    static let profileStoryBoardID = "ProfileViewController"
 }
 
 enum TabbarItemType {
-    case home, upcoming, search
+    case home, upcoming, search, profile
 
     var name: String {
         switch self {
@@ -27,6 +29,8 @@ enum TabbarItemType {
             return TabBarConstant.upcomingStoryBoardName
         case .search:
             return TabBarConstant.searchStoryBoardName
+        case .profile:
+            return TabBarConstant.profileStoryBoardName
         }
     }
 
@@ -38,6 +42,8 @@ enum TabbarItemType {
             return TabBarConstant.upcomingStoryBoardID
         case .search:
             return TabBarConstant.searchStoryBoardID
+        case .profile:
+            return TabBarConstant.profileStoryBoardID
         }
     }
 
@@ -49,6 +55,8 @@ enum TabbarItemType {
             return UIImage(systemName: "clock.badge.checkmark")!
         case .search:
             return UIImage(systemName: "magnifyingglass.circle")!
+        case .profile:
+            return UIImage(systemName: "person")!
         }
     }
 
@@ -60,6 +68,8 @@ enum TabbarItemType {
             return UIImage(systemName: "clock.badge.checkmark.fill")!
         case .search:
             return UIImage(systemName: "magnifyingglass.circle.fill")!
+        case .profile:
+            return UIImage(systemName: "person.fill")!
         }
     }
 
@@ -71,13 +81,15 @@ enum TabbarItemType {
             return "Çok Yakında"
         case .search:
             return "Arama"
+        case .profile:
+            return "Profil"
         }
     }
 }
 
 final class BaseTabBarController: UITabBarController {
     var items: [TabbarItemType] {
-        [.home, .upcoming, .search]
+        [.home, .upcoming, .search, .profile]
     }
 
     override func viewDidLoad() {
