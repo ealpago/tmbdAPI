@@ -14,4 +14,3 @@ struct CellModel {
         self.items = items
     }
 }
-

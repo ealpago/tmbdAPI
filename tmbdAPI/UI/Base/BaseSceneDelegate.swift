@@ -26,10 +26,10 @@ open class BaseSceneDelegate: UIResponder, UIWindowSceneDelegate {
     open func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 //        window?.rootViewController = "LaunchScreen".initialViewController
 //        window?.makeKeyAndVisible()
-        if UserDefaults.user != nil {
-            let firstWindow = "BaseTabbarStoryboard".viewController(identifier: "BaseTabBarController")
-            self.window?.rootViewController = firstWindow
-        }
+//        if UserDefaults.user != nil {
+//            let firstWindow = "BaseTabbarStoryboard".viewController(identifier: "BaseTabBarController")
+//            self.window?.rootViewController = firstWindow
+//        }
         NetworkMonitor.shared.delegate = self
         NetworkMonitor.shared.startMonitoring()
         guard let _ = (scene as? UIWindowScene) else { return }

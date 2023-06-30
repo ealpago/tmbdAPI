@@ -42,6 +42,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         passwordView.loginSection = .password
         loginButton.layer.cornerRadius = 20
         setButtonEnable()
+        emailView.textField.autocorrectionType = .no
         emailView.textFieldDidEnd = { text in
             self.email = text
             self.setButtonEnable()

@@ -18,7 +18,6 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     @IBOutlet private weak var favoritesButton: UIButton!
     @IBOutlet private weak var logoutButton: UIButton!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
