@@ -29,6 +29,8 @@ public enum NetworkRouter {
     case movieRecommendations(movieID: Int)
     case similarMovies(movieID: Int)
     case searchMovie(query: String)
+    case personDetail(personID: Int)
+    case personMovies(personID: Int)
 
     public var method: HTTPMethod {
         switch self {
@@ -51,6 +53,10 @@ public enum NetworkRouter {
         case .similarMovies(_):
             return .get
         case .searchMovie(_):
+            return .get
+        case .personDetail(personID: _):
+            return .get
+        case .personMovies(personID: _):
             return .get
         }
     }
@@ -77,6 +83,10 @@ public enum NetworkRouter {
             return movieBaseURL + "\(movieID)" + "/similar" + apiKey
         case .searchMovie(query: let query):
             return "https://api.themoviedb.org/3/search/movie" + apiKey + "&query=\(query)"
+        case .personDetail(personID: let personID):
+            return "https://api.themoviedb.org/3/person/" + "\(personID)" + apiKey
+        case .personMovies(personID: let personID):
+            return "https://api.themoviedb.org/3/person/" + "\(personID)" + "/movie_credits"
         }
     }
 }
