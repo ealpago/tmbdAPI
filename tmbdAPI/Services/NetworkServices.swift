@@ -86,7 +86,7 @@ public enum NetworkRouter {
         case .personDetail(personID: let personID):
             return "https://api.themoviedb.org/3/person/" + "\(personID)" + apiKey
         case .personMovies(personID: let personID):
-            return "https://api.themoviedb.org/3/person/" + "\(personID)" + "/movie_credits"
+            return "https://api.themoviedb.org/3/person/" + "\(personID)" + "/movie_credits" + apiKey
         }
     }
 }

@@ -27,7 +27,7 @@ class ActorDetailViewController: BaseViewController<ActorDetailViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setTitle()
         viewModel.takeData(personID: personID ?? 0)
         viewModel.setupCollectionView(with: collectionView)
         viewModel.reloadCollectionViewData = {
@@ -37,10 +37,9 @@ class ActorDetailViewController: BaseViewController<ActorDetailViewModel> {
             }
         }
         viewModel.movieTapped = { id in
-            DispatchQueue.main.async {
-                self.viewModel.takeData(personID: id ?? 0)
-                self.setDataToUI()
-                self.collectionView.reloadData()
+            if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController {
+                vc.movieDetailID = id
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }

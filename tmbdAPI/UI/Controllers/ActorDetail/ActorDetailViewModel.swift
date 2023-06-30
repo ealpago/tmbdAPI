@@ -19,15 +19,15 @@ class ActorDetailViewModel: BaseViewModel {
         self.delegate?.startLoading()
         let group = DispatchGroup()
         group.enter()
-//        group.enter()
+        group.enter()
 
         getPersonDetail(personID: personID) {
             group.leave()
         }
 
-//        getPersonMovies(personID: personID) {
-//            group.leave()
-//        }
+        getPersonMovies(personID: personID) {
+            group.leave()
+        }
 
         group.notify(queue: .main, execute: {
             DispatchQueue.main.async {
