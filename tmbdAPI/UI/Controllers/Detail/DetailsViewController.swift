@@ -161,5 +161,9 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     }
 
     @IBAction func showCommentsButtonTapped(_ sender: UIButton) {
+        if let vc = "CommentsStoryboard".viewController(identifier: CommentsViewController.identifier) as? CommentsViewController {
+            vc.movieDetail = self.viewModel.movieDetail
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

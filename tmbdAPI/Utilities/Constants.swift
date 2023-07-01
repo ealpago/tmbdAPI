@@ -24,8 +24,8 @@ struct Constants {
     }
 
     struct FirebaseDBCommentsConstants {
-        static let userMail = "user"
-        static let vote = "vote"
+        static let movieID = "movieID"
+        static let userMail = "commentOwner"
         static let comment = "comment"
     }
 }
