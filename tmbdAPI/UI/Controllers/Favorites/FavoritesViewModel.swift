@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class FavoritesViewModel: BaseViewModel {
+
+    var selectedCell:(Int)->() = {id in}
     var favoritesList: [DBMovies] = []
     let db = Firestore.firestore()
 
@@ -22,7 +24,7 @@ class FavoritesViewModel: BaseViewModel {
                         print(doc.data())
                         let data = doc.data()
 
-                        if let owner = data[Constants.FirebaseFavoritesConstants.favoriteListOwner] as? String, let movieID = data[Constants.FirebaseFavoritesConstants.movieID] as? Int, let movieName = data[Constants.FirebaseFavoritesConstants.movieName] as? String, let movieDescription = data[Constants.FirebaseFavoritesConstants.movieDescription] as? String, let imagePath = data[Constants.FirebaseFavoritesConstants.movieImage] as? String {
+                        if let owner = data[Constants.FirebaseDBMoviesConstants.favoriteListOwner] as? String, let movieID = data[Constants.FirebaseDBMoviesConstants.movieID] as? Int, let movieName = data[Constants.FirebaseDBMoviesConstants.movieName] as? String, let movieDescription = data[Constants.FirebaseDBMoviesConstants.movieDescription] as? String, let imagePath = data[Constants.FirebaseDBMoviesConstants.movieImage] as? String {
                                let newMovie = DBMovies(owner: owner, id: movieID, name: movieName, image: imagePath, description: movieDescription)
                             self.favoritesList.append(newMovie)
                             completion()
@@ -53,5 +55,10 @@ extension FavoritesViewModel: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellID = favoritesList[indexPath.row].id
+        selectedCell(cellID ?? 0)
     }
 }

@@ -20,6 +20,12 @@ class FavoritesViewController: BaseViewController<FavoritesViewModel> {
                 self.favoritesTableView.reloadData()
             }
         }
+        viewModel.selectedCell = { id in
+            if let vc = "DetailsStoryboard".viewController(identifier: DetailsViewController.identifier) as? DetailsViewController{
+                vc.movieDetailID = id
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 
     override func setViewModel() {
