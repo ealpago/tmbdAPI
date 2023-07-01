@@ -49,6 +49,7 @@ class ActorDetailViewController: BaseViewController<ActorDetailViewModel> {
     }
 
     func setDataToUI() {
+        self.startLoading()
         if let data = viewModel.personDetail {
             nameLabel.text = data.name
             actorDetailLabel.text = data.biography
@@ -62,5 +63,6 @@ class ActorDetailViewController: BaseViewController<ActorDetailViewModel> {
                 self.imageView?.downloaded(from: characterImageURL)
             }
         }
+        self.stopLoading()
     }
 }

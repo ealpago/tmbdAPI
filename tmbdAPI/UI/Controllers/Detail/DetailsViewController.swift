@@ -26,6 +26,9 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBOutlet private weak var yearLabelView: DetailInfoView!
     @IBOutlet private weak var countryLabelView: DetailInfoView!
     @IBOutlet private weak var timeLabelView: DetailInfoView!
+    @IBOutlet private weak var favoriteButton: UIButton!
+    @IBOutlet private weak var watchLaterButton: UIButton!
+    @IBOutlet private weak var commentSectionButton: UIButton!
     @IBOutlet private weak var budgetCategoryLabelView: DetailInfoView!
     @IBOutlet private weak var castCollectionView: UICollectionView!
     @IBOutlet private weak var recomendedCollectionView: UICollectionView!
@@ -72,10 +75,25 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
         previewStackView.layer.borderWidth = 2
         yearLabelView.title = "2013"
         budgetCategoryLabelView.textAlignment = .left
+        percentContainerView.layer.cornerRadius = percentContainerView.frame.height / 2
+        percentContainerView.backgroundColor = .brown.withAlphaComponent(0.7)
+        favoriteButton.layer.cornerRadius = 15
+        favoriteButton.layer.borderColor = UIColor.brown.cgColor
+        favoriteButton.layer.borderWidth = 2
+
+        watchLaterButton.layer.cornerRadius = 15
+        watchLaterButton.layer.borderColor = UIColor.brown.cgColor
+        watchLaterButton.layer.borderWidth = 2
+
+        commentSectionButton.layer.cornerRadius = 15
+        commentSectionButton.layer.borderColor = UIColor.brown.cgColor
+        commentSectionButton.layer.borderWidth = 2
     }
 
     func setDataToUI() {
+        self.startLoading()
         if let data = viewModel.movieDetail {
+            setTitle(title: data.title ?? "Detaylar")
             titleLabel.text = data.title
             descriptionLabel.text = data.overview
             yearLabelView.title = data.releaseDate ?? ""
@@ -88,11 +106,15 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
             if let budget = data.budget {
                 budgetCategoryLabelView.title = "Bütçe: \(budget)$"
             }
+            if let vote = data.voteAverage {
+                percentLabel.text = String(format: "%.1f", vote)
+            }
             DispatchQueue.main.async {
                 let characterImageUrlPath = data.posterPath ?? ""
                 guard let characterImageURL = URL(string: "https://image.tmdb.org/t/p/w500/"+characterImageUrlPath) else {return}
                 self.imageView?.downloaded(from: characterImageURL)
             }
         }
+        self.stopLoading()
     }
 }
