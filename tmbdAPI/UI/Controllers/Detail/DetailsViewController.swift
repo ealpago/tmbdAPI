@@ -35,6 +35,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBOutlet private weak var recomendedCollectionView: UICollectionView!
 
     var movieDetailID: Int?
+    var movieImagePath: String?
     let db = Firestore.firestore()
 
     override func viewDidLoad() {
@@ -113,6 +114,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
             }
             DispatchQueue.main.async {
                 let characterImageUrlPath = data.posterPath ?? ""
+                self.movieImagePath = data.posterPath ?? ""
                 guard let characterImageURL = URL(string: "https://image.tmdb.org/t/p/w500/"+characterImageUrlPath) else {return}
                 self.imageView?.downloaded(from: characterImageURL)
             }
@@ -122,10 +124,11 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
 
     @IBAction func addFavoriteButtonTapped(_ sender: UIButton) {
         var ref: DocumentReference? = nil
-        if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text {
+        if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text, let movieImage = movieImagePath {
             ref = db.collection("favorites").addDocument(data: [
                 "favoriteListOwner" : user,
                     "movieID": movieID,
+                "movieImage": movieImage,
                 "movieName": movieName,
                 "movieDescription": movieDescription
             ]) { err in

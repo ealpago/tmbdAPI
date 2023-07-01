@@ -10,7 +10,9 @@ import UIKit
 class FavoritesViewModel: BaseViewModel {
     var favoritesList: [String] = []
 
-
+    func takeFavoritesFromDB() {
+        
+    }
     
 }
 

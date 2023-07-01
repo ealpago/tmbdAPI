@@ -83,6 +83,8 @@
 		D11D5D002A504A4200D4D194 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CFF2A504A4200D4D194 /* FavoritesViewController.swift */; };
 		D11D5D022A504A5000D4D194 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D012A504A5000D4D194 /* FavoritesViewModel.swift */; };
 		D11D5D042A504A5C00D4D194 /* FavoritesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11D5D032A504A5C00D4D194 /* FavoritesStoryboard.storyboard */; };
+		D11D5D072A5059C700D4D194 /* DBMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D062A5059C700D4D194 /* DBMovies.swift */; };
+		D11D5D092A50769C00D4D194 /* DBComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D082A50769B00D4D194 /* DBComments.swift */; };
 		D14C36ED2A42FC6200F3554E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36EC2A42FC6200F3554E /* BaseViewController.swift */; };
 		D14C36F12A42FCCA00F3554E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */; };
 		D14C36F42A430D0300F3554E /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F32A430D0300F3554E /* CellModel.swift */; };
@@ -212,6 +214,8 @@
 		D11D5CFF2A504A4200D4D194 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		D11D5D012A504A5000D4D194 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		D11D5D032A504A5C00D4D194 /* FavoritesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesStoryboard.storyboard; sourceTree = "<group>"; };
+		D11D5D062A5059C700D4D194 /* DBMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBMovies.swift; sourceTree = "<group>"; };
+		D11D5D082A50769B00D4D194 /* DBComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBComments.swift; sourceTree = "<group>"; };
 		D14C36EC2A42FC6200F3554E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D14C36F32A430D0300F3554E /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -403,6 +407,7 @@
 		D1074DB12A3609C400906579 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D11D5D052A5059AC00D4D194 /* FirebaseModels */,
 				D14C36F22A430CF100F3554E /* CellModels */,
 				D1F0488F2A4100A6005D6965 /* MoviesResponseModels */,
 				D11D5CF22A4F460500D4D194 /* PersonResponseModels */,
@@ -568,6 +573,15 @@
 				D11D5CF82A4F48F200D4D194 /* PersonsMoviesCasts.swift */,
 			);
 			path = PersonsMovies;
+			sourceTree = "<group>";
+		};
+		D11D5D052A5059AC00D4D194 /* FirebaseModels */ = {
+			isa = PBXGroup;
+			children = (
+				D11D5D062A5059C700D4D194 /* DBMovies.swift */,
+				D11D5D082A50769B00D4D194 /* DBComments.swift */,
+			);
+			path = FirebaseModels;
 			sourceTree = "<group>";
 		};
 		D14C36EB2A42FC3E00F3554E /* Base */ = {
@@ -1084,6 +1098,7 @@
 				D1F048862A40FF38005D6965 /* PopularMovies.swift in Sources */,
 				D1074D7E2A36093300906579 /* AppDelegate.swift in Sources */,
 				D14C36FF2A4353B100F3554E /* SearchResponse.swift in Sources */,
+				D11D5D092A50769C00D4D194 /* DBComments.swift in Sources */,
 				D1F048812A40FE67005D6965 /* NowPlayingMoviesResults.swift in Sources */,
 				D1F048AB2A410483005D6965 /* MovieKeywords.swift in Sources */,
 				D14C37262A44404100F3554E /* ServiceError.swift in Sources */,
@@ -1122,6 +1137,7 @@
 				D14C37202A43DB4F00F3554E /* BelongToCollection.swift in Sources */,
 				D11D5CD82A4DD46200D4D194 /* TextFieldView.swift in Sources */,
 				D11D5CDF2A4E1EBE00D4D194 /* UserDefaults+Ext.swift in Sources */,
+				D11D5D072A5059C700D4D194 /* DBMovies.swift in Sources */,
 				D11D5CF52A4F462D00D4D194 /* PersonDetail.swift in Sources */,
 				D14C36F62A430D6900F3554E /* CellModelItems.swift in Sources */,
 				D14C371D2A43C28F00F3554E /* CastCollectionViewCell.swift in Sources */,
