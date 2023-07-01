@@ -17,7 +17,6 @@ class DetailViewModel: BaseViewModel {
     var recommendationMoviesModel:[CellModel] = []
     var recommendationMoviesModelItems:[CellModelItems] = []
 
-
     func takeData(movieID: Int) {
         self.delegate?.startLoading()
         let group = DispatchGroup()

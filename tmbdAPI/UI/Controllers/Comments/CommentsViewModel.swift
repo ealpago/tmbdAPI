@@ -9,11 +9,13 @@ import UIKit
 import Firebase
 
 class CommentsViewModel: BaseViewModel {
+
+    var movieID: Int?
     var comments: [DBComments] = []
     let db = Firestore.firestore()
 
     func takeCommentsFromDB(completion: @escaping()->()) {
-        db.collection(Constants.FirebaseConstant.moviesComments).addSnapshotListener { querySnapshot, error in
+        db.collection(Constants.FirebaseConstant.moviesComments).whereField(Constants.FirebaseDBCommentsConstants.movieID, isEqualTo: movieID ?? 0).addSnapshotListener { querySnapshot, error in
             self.comments = []
             if let e = error {
                 print("Get Documents Has Error \(e)")

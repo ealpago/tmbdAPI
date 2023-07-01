@@ -31,6 +31,7 @@ class CommentsViewController: BaseViewController<CommentsViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitle(title: "Yorumlar")
+        viewModel.movieID = movieDetail?.id
         viewModel.setupTableView(with: commentsTableView)
         viewModel.takeCommentsFromDB {
             DispatchQueue.main.async {
