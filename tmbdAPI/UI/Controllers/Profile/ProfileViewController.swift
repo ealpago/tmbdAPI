@@ -25,7 +25,16 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     override func setViewModel() {
         viewModel = ProfileViewModel()
     }
-    
+
+    @IBAction func watchLaterButtonTapped(_ sender: UIButton) {
+    }
+
+    @IBAction func favoritesButtonTapped(_ sender: UIButton) {
+        if let vc = "FavoritesStoryboard".viewController(identifier: FavoritesViewController.identifier) as? FavoritesViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
         let firebaseAuth = Auth.auth()
         do {

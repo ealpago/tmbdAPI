@@ -125,7 +125,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBAction func addFavoriteButtonTapped(_ sender: UIButton) {
         var ref: DocumentReference? = nil
         if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text, let movieImage = movieImagePath {
-            ref = db.collection("favorites").addDocument(data: [
+            ref = db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).addDocument(data: [
                 "favoriteListOwner" : user,
                     "movieID": movieID,
                 "movieImage": movieImage,

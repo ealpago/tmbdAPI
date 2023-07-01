@@ -13,6 +13,13 @@ class FavoritesViewController: BaseViewController<FavoritesViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitle(title: "Favori Filmlerim")
+        viewModel.setupTableView(with: favoritesTableView)
+        viewModel.takeFavoritesFromDB {
+            DispatchQueue.main.async {
+                self.favoritesTableView.reloadData()
+            }
+        }
     }
 
     override func setViewModel() {
