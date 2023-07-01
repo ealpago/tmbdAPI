@@ -142,6 +142,22 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     }
 
     @IBAction func addWatchLaterButtonTapped(_ sender: UIButton) {
+        var ref: DocumentReference? = nil
+        if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text, let movieImage = movieImagePath {
+            ref = db.collection(Constants.FirebaseConstant.watchLaterMovies).addDocument(data: [
+                "favoriteListOwner" : user,
+                    "movieID": movieID,
+                "movieImage": movieImage,
+                "movieName": movieName,
+                "movieDescription": movieDescription
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
+                }
+            }
+        }
     }
 
     @IBAction func showCommentsButtonTapped(_ sender: UIButton) {

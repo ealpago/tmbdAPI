@@ -86,6 +86,9 @@
 		D11D5D072A5059C700D4D194 /* DBMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D062A5059C700D4D194 /* DBMovies.swift */; };
 		D11D5D092A50769C00D4D194 /* DBComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D082A50769B00D4D194 /* DBComments.swift */; };
 		D11D5D0D2A507B0300D4D194 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D0C2A507B0300D4D194 /* Constants.swift */; };
+		D11D5D0F2A50857600D4D194 /* WatchLaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D0E2A50857600D4D194 /* WatchLaterViewController.swift */; };
+		D11D5D112A50858500D4D194 /* WatchLaterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D102A50858500D4D194 /* WatchLaterViewModel.swift */; };
+		D11D5D132A50859100D4D194 /* WatchLaterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11D5D122A50859100D4D194 /* WatchLaterStoryboard.storyboard */; };
 		D14C36ED2A42FC6200F3554E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36EC2A42FC6200F3554E /* BaseViewController.swift */; };
 		D14C36F12A42FCCA00F3554E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */; };
 		D14C36F42A430D0300F3554E /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F32A430D0300F3554E /* CellModel.swift */; };
@@ -218,6 +221,9 @@
 		D11D5D062A5059C700D4D194 /* DBMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBMovies.swift; sourceTree = "<group>"; };
 		D11D5D082A50769B00D4D194 /* DBComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBComments.swift; sourceTree = "<group>"; };
 		D11D5D0C2A507B0300D4D194 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D11D5D0E2A50857600D4D194 /* WatchLaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLaterViewController.swift; sourceTree = "<group>"; };
+		D11D5D102A50858500D4D194 /* WatchLaterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLaterViewModel.swift; sourceTree = "<group>"; };
+		D11D5D122A50859100D4D194 /* WatchLaterStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchLaterStoryboard.storyboard; sourceTree = "<group>"; };
 		D14C36EC2A42FC6200F3554E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D14C36F32A430D0300F3554E /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -545,6 +551,9 @@
 		D11D5CEA2A4F268100D4D194 /* WatchLater */ = {
 			isa = PBXGroup;
 			children = (
+				D11D5D0E2A50857600D4D194 /* WatchLaterViewController.swift */,
+				D11D5D102A50858500D4D194 /* WatchLaterViewModel.swift */,
+				D11D5D122A50859100D4D194 /* WatchLaterStoryboard.storyboard */,
 			);
 			path = WatchLater;
 			sourceTree = "<group>";
@@ -1002,6 +1011,7 @@
 				D1074D8A2A36093500906579 /* Assets.xcassets in Resources */,
 				D1074DCA2A38FFD300906579 /* HomeStoryboard.storyboard in Resources */,
 				D1074D852A36093400906579 /* Main.storyboard in Resources */,
+				D11D5D132A50859100D4D194 /* WatchLaterStoryboard.storyboard in Resources */,
 				D11D5CE82A4F0D1800D4D194 /* ProfileStoryboard.storyboard in Resources */,
 				D11D5CDD2A4E1A0D00D4D194 /* BaseTabbarStoryboard.storyboard in Resources */,
 				D11D5C902A4B7F3F00D4D194 /* GoogleService-Info.plist in Resources */,
@@ -1110,6 +1120,7 @@
 				D1F048862A40FF38005D6965 /* PopularMovies.swift in Sources */,
 				D1074D7E2A36093300906579 /* AppDelegate.swift in Sources */,
 				D14C36FF2A4353B100F3554E /* SearchResponse.swift in Sources */,
+				D11D5D112A50858500D4D194 /* WatchLaterViewModel.swift in Sources */,
 				D11D5D092A50769C00D4D194 /* DBComments.swift in Sources */,
 				D1F048812A40FE67005D6965 /* NowPlayingMoviesResults.swift in Sources */,
 				D1F048AB2A410483005D6965 /* MovieKeywords.swift in Sources */,
@@ -1157,6 +1168,7 @@
 				D1F0487F2A40FE0A005D6965 /* NowPlayingMovies.swift in Sources */,
 				D14C37242A443F8400F3554E /* NetworkMonitor.swift in Sources */,
 				D11D5CF92A4F48F200D4D194 /* PersonsMoviesCasts.swift in Sources */,
+				D11D5D0F2A50857600D4D194 /* WatchLaterViewController.swift in Sources */,
 				D1F0489D2A41024F005D6965 /* SpokenLanguage.swift in Sources */,
 				D11D5CCC2A4CCD2000D4D194 /* LoginViewModel.swift in Sources */,
 				D14C36FA2A4343A600F3554E /* UIColor+Ext.swift in Sources */,

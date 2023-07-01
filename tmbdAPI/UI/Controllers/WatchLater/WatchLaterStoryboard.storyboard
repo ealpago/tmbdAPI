@@ -7,15 +7,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorites View Controller-->
+        <!--Watch Later View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="FavoritesViewController" id="Y6W-OH-hqX" customClass="FavoritesViewController" customModule="tmbdAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WatchLaterViewController" id="Y6W-OH-hqX" customClass="WatchLaterViewController" customModule="tmbdAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ecv-Om-YY0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ff2-Oe-J76">
                                 <rect key="frame" x="20" y="79" width="353" height="739"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -23,19 +23,19 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.15269375090000001" green="0.097525748800000006" blue="0.087475492660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ecv-Om-YY0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="5ds-6O-6fs"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ecv-Om-YY0" secondAttribute="bottom" id="7IP-ZR-k5P"/>
-                            <constraint firstItem="ecv-Om-YY0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="BZb-rA-a7O"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ecv-Om-YY0" secondAttribute="trailing" constant="20" id="x53-vI-nmM"/>
+                            <constraint firstItem="ff2-Oe-J76" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="3Cz-j5-feL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ff2-Oe-J76" secondAttribute="bottom" id="HHO-rv-Qpa"/>
+                            <constraint firstItem="ff2-Oe-J76" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Kau-XY-z3r"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ff2-Oe-J76" secondAttribute="trailing" constant="20" id="vjZ-lY-sHJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="favoritesTableView" destination="ecv-Om-YY0" id="XCy-A7-2wk"/>
+                        <outlet property="watchLaterTableView" destination="ff2-Oe-J76" id="yyO-Ed-APD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="-2"/>
+            <point key="canvasLocation" x="6" y="-2"/>
         </scene>
     </scenes>
 </document>

@@ -27,6 +27,9 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     }
 
     @IBAction func watchLaterButtonTapped(_ sender: UIButton) {
+        if let vc = "WatchLaterStoryboard".viewController(identifier: WatchLaterViewController.identifier) as? WatchLaterViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     @IBAction func favoritesButtonTapped(_ sender: UIButton) {
