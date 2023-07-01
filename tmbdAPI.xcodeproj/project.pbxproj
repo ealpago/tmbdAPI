@@ -80,6 +80,9 @@
 		D11D5CF92A4F48F200D4D194 /* PersonsMoviesCasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CF82A4F48F200D4D194 /* PersonsMoviesCasts.swift */; };
 		D11D5CFB2A4F492400D4D194 /* PersonsMoviesCrew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CFA2A4F492400D4D194 /* PersonsMoviesCrew.swift */; };
 		D11D5CFD2A4F494D00D4D194 /* PersonMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CFC2A4F494D00D4D194 /* PersonMovies.swift */; };
+		D11D5D002A504A4200D4D194 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5CFF2A504A4200D4D194 /* FavoritesViewController.swift */; };
+		D11D5D022A504A5000D4D194 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D012A504A5000D4D194 /* FavoritesViewModel.swift */; };
+		D11D5D042A504A5C00D4D194 /* FavoritesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11D5D032A504A5C00D4D194 /* FavoritesStoryboard.storyboard */; };
 		D14C36ED2A42FC6200F3554E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36EC2A42FC6200F3554E /* BaseViewController.swift */; };
 		D14C36F12A42FCCA00F3554E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */; };
 		D14C36F42A430D0300F3554E /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F32A430D0300F3554E /* CellModel.swift */; };
@@ -206,6 +209,9 @@
 		D11D5CF82A4F48F200D4D194 /* PersonsMoviesCasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsMoviesCasts.swift; sourceTree = "<group>"; };
 		D11D5CFA2A4F492400D4D194 /* PersonsMoviesCrew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsMoviesCrew.swift; sourceTree = "<group>"; };
 		D11D5CFC2A4F494D00D4D194 /* PersonMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonMovies.swift; sourceTree = "<group>"; };
+		D11D5CFF2A504A4200D4D194 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		D11D5D012A504A5000D4D194 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		D11D5D032A504A5C00D4D194 /* FavoritesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesStoryboard.storyboard; sourceTree = "<group>"; };
 		D14C36EC2A42FC6200F3554E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D14C36F32A430D0300F3554E /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -521,6 +527,9 @@
 		D11D5CE92A4F267800D4D194 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				D11D5CFF2A504A4200D4D194 /* FavoritesViewController.swift */,
+				D11D5D012A504A5000D4D194 /* FavoritesViewModel.swift */,
+				D11D5D032A504A5C00D4D194 /* FavoritesStoryboard.storyboard */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -956,6 +965,7 @@
 				D11D5CF12A4F26D700D4D194 /* ActorDetailStoryboard.storyboard in Resources */,
 				D1074DD92A390DB800906579 /* SearchStoryboard.storyboard in Resources */,
 				D17BC9452A3913330071B9A2 /* DetailedTableViewCell.xib in Resources */,
+				D11D5D042A504A5C00D4D194 /* FavoritesStoryboard.storyboard in Resources */,
 				D14C370F2A43ADEF00F3554E /* DetailInfoView.xib in Resources */,
 				D1F048762A3E1109005D6965 /* HeaderView.xib in Resources */,
 				D11D5CDA2A4DD47900D4D194 /* TextFieldView.xib in Resources */,
@@ -1063,6 +1073,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11D5D022A504A5000D4D194 /* FavoritesViewModel.swift in Sources */,
 				D1F0488D2A41002E005D6965 /* TopRatedMoviesResults.swift in Sources */,
 				D1074DBC2A38F9BB00906579 /* UpcomingViewModel.swift in Sources */,
 				D1074D822A36093300906579 /* BaseTabBarController.swift in Sources */,
@@ -1129,6 +1140,7 @@
 				D14C36F82A432FDD00F3554E /* UIImageView+Ext.swift in Sources */,
 				D1074DBE2A38F9CD00906579 /* DetailsViewController.swift in Sources */,
 				D11D5CD12A4CE8BC00D4D194 /* SignUpViewController.swift in Sources */,
+				D11D5D002A504A4200D4D194 /* FavoritesViewController.swift in Sources */,
 				D1F0489F2A410273005D6965 /* MovieDetail.swift in Sources */,
 				D17BC9442A3913330071B9A2 /* DetailedTableViewCell.swift in Sources */,
 				D1F0488B2A41000B005D6965 /* TopRatedMovies.swift in Sources */,

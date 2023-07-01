@@ -171,6 +171,9 @@
                                                                         <color key="tintColor" red="0.63529411759999999" green="0.5" blue="0.33041529110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" image="star" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="addFavoriteButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ydU-q9-xpD"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorilere Ekle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erM-j3-w6a">
                                                                         <rect key="frame" x="0.0" y="31.999999999999996" width="119" height="14.333333333333332"/>
@@ -189,6 +192,9 @@
                                                                         <color key="tintColor" red="0.63529411759999999" green="0.5" blue="0.33041529110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" image="checkmark.circle" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="addWatchLaterButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="O2z-EM-IGq"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İzleneceklere Ekle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR2-Wm-aU8">
                                                                         <rect key="frame" x="0.0" y="31.999999999999996" width="119" height="14.333333333333332"/>
@@ -206,6 +212,9 @@
                                                                         <color key="tintColor" red="0.63529411759999999" green="0.5" blue="0.33041529110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" image="message.badge" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="showCommentsButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jbk-N3-GgI"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yorumlar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2n-fm-75M" userLabel="Yorumlar">
                                                                         <rect key="frame" x="0.0" y="31.999999999999996" width="119" height="14.333333333333332"/>

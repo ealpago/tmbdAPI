@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DetailsViewController: BaseViewController<DetailViewModel> {
 
@@ -34,6 +35,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBOutlet private weak var recomendedCollectionView: UICollectionView!
 
     var movieDetailID: Int?
+    let db = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,5 +118,29 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
             }
         }
         self.stopLoading()
+    }
+
+    @IBAction func addFavoriteButtonTapped(_ sender: UIButton) {
+        var ref: DocumentReference? = nil
+        if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text {
+            ref = db.collection("favorites").addDocument(data: [
+                "favoriteListOwner" : user,
+                    "movieID": movieID,
+                "movieName": movieName,
+                "movieDescription": movieDescription
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
+                }
+            }
+        }
+    }
+
+    @IBAction func addWatchLaterButtonTapped(_ sender: UIButton) {
+    }
+
+    @IBAction func showCommentsButtonTapped(_ sender: UIButton) {
     }
 }
