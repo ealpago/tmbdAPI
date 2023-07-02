@@ -85,12 +85,12 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
             }
         }
         viewModel.recommendedMovieTapped = { id in
-                DispatchQueue.main.async {
-                    self.viewModel.takeData(movieID: id ?? 0)
-                    self.setDataToUI()
-                    self.castCollectionView.reloadData()
-                    self.recomendedCollectionView.reloadData()
-                }
+            DispatchQueue.main.async {
+                self.viewModel.takeData(movieID: id ?? 0)
+                self.setDataToUI()
+                self.castCollectionView.reloadData()
+                self.recomendedCollectionView.reloadData()
+            }
         }
         viewModel.movieTapped = { id in
             if let vc = "ActorDetailStoryboard".viewController(identifier: ActorDetailViewController.identifier) as? ActorDetailViewController {
@@ -155,40 +155,74 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     }
 
     @IBAction func addFavoriteButtonTapped(_ sender: UIButton) {
-        var ref: DocumentReference? = nil
-        if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text, let movieImage = movieImagePath {
-            ref = db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).addDocument(data: [
-                "favoriteListOwner" : user,
-                    "movieID": movieID,
-                "movieImage": movieImage,
-                "movieName": movieName,
-                "movieDescription": movieDescription
-            ]) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                } else {
-                    print("Document added with ID: \(ref!.documentID)")
+        if let favorite = isFavorite {
+            if !favorite {
+                if let id = viewModel.watchLaterDocumentID {
+                    db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).document(id).delete() { err in
+                        if let err = err {
+                            print("Error removing document: \(err)")
+                        } else {
+                            print("Document successfully removed!")
+                        }
+                    }
+                }
+            } else {
+                var ref: DocumentReference? = nil
+                if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text, let movieImage = movieImagePath {
+                    ref = db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).addDocument(data: [
+                        "favoriteListOwner" : user,
+                        "movieID": movieID,
+                        "movieImage": movieImage,
+                        "movieName": movieName,
+                        "movieDescription": movieDescription
+                    ]) { err in
+                        if let err = err {
+                            print("Error adding document: \(err)")
+                        } else {
+                            print("Document added with ID: \(ref!.documentID)")
+                        }
+                    }
                 }
             }
+        }
+        viewModel.takeFavoritesFromFirestore(movieID: movieDetailID ?? 0) { isFavorite in
+            self.isFavorite = isFavorite
         }
     }
 
     @IBAction func addWatchLaterButtonTapped(_ sender: UIButton) {
-        var ref: DocumentReference? = nil
-        if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text, let movieImage = movieImagePath {
-            ref = db.collection(Constants.FirebaseConstant.watchLaterMovies).addDocument(data: [
-                "favoriteListOwner" : user,
-                    "movieID": movieID,
-                "movieImage": movieImage,
-                "movieName": movieName,
-                "movieDescription": movieDescription
-            ]) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                } else {
-                    print("Document added with ID: \(ref!.documentID)")
+        if let watchList = isWatchList {
+            if !watchList {
+                if let id = viewModel.watchLaterDocumentID {
+                    db.collection(Constants.FirebaseConstant.watchLaterMovies).document(id).delete() { err in
+                        if let err = err {
+                            print("Error removing document: \(err)")
+                        } else {
+                            print("Document successfully removed!")
+                        }
+                    }
+                }
+            } else {
+                var ref: DocumentReference? = nil
+                if let movieID = movieDetailID, let user = Auth.auth().currentUser?.email, let movieName = titleLabel.text, let movieDescription = descriptionLabel.text, let movieImage = movieImagePath {
+                    ref = db.collection(Constants.FirebaseConstant.watchLaterMovies).addDocument(data: [
+                        "favoriteListOwner" : user,
+                        "movieID": movieID,
+                        "movieImage": movieImage,
+                        "movieName": movieName,
+                        "movieDescription": movieDescription
+                    ]) { err in
+                        if let err = err {
+                            print("Error adding document: \(err)")
+                        } else {
+                            print("Document added with ID: \(ref!.documentID)")
+                        }
+                    }
                 }
             }
+        }
+        viewModel.takeMovieListFromFirestore(movieID: movieDetailID ?? 0) { isList in
+            self.isWatchList = isList
         }
     }
 

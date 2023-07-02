@@ -21,6 +21,8 @@ class DetailViewModel: BaseViewModel {
 
     var favMovie: DBMovies?
     var watchLaterMovie: DBMovies?
+    var favoriteDocumentID: String?
+    var watchLaterDocumentID: String?
 
     func takeData(movieID: Int) {
         self.delegate?.startLoading()
@@ -89,6 +91,8 @@ class DetailViewModel: BaseViewModel {
                     } else {
                         for document in snapshotDoc {
                             print(document.data())
+                            print(document.documentID)
+                            self.watchLaterDocumentID = document.documentID
                             completion(false)
                         }
                     }
@@ -108,6 +112,8 @@ class DetailViewModel: BaseViewModel {
                     } else {
                         for document in snapshotDoc {
                             print(document.data())
+                            print(document.documentID)
+                            self.favoriteDocumentID = document.documentID
                             completion(false)
                         }
                     }

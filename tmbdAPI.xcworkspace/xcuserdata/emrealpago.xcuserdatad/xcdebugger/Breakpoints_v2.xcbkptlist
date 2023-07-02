@@ -3,4 +3,255 @@
    uuid = "6779C058-5671-4B81-BDCD-45E1AC617AE5"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "245C1B04-68A4-44C0-9104-3A480373CDEB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "addWatchLaterButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "245C1B04-68A4-44C0-9104-3A480373CDEB - f0c9cca7dd1cad89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addWatchLaterButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "2584">
+               </Location>
+               <Location
+                  uuid = "245C1B04-68A4-44C0-9104-3A480373CDEB - f0c9cca7dd1cad89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addWatchLaterButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "245C1B04-68A4-44C0-9104-3A480373CDEB - f0c9cca7dd1cad89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addWatchLaterButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C5185FC-0F43-4DC2-9BC2-2917F6738B39"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "addFavoriteButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2C5185FC-0F43-4DC2-9BC2-2917F6738B39 - 2dc657f2ca5b529c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "2C5185FC-0F43-4DC2-9BC2-2917F6738B39 - 41aa2fc179b3fb13"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "2C5185FC-0F43-4DC2-9BC2-2917F6738B39 - 2dc657f2ca5b529c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "2C5185FC-0F43-4DC2-9BC2-2917F6738B39 - 2dc657f2ca5b529c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A20E2BD4-DAC7-4DD5-8B5A-19BA54A8BE06"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "isFavorite"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A20E2BD4-DAC7-4DD5-8B5A-19BA54A8BE06 - 3fae2dbdc4d2e6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.isFavorite.getter : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "A20E2BD4-DAC7-4DD5-8B5A-19BA54A8BE06 - 65dce915607f7619"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.isFavorite.setter : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "A20E2BD4-DAC7-4DD5-8B5A-19BA54A8BE06 - b34125336484906e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.isFavorite.modify : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "A20E2BD4-DAC7-4DD5-8B5A-19BA54A8BE06 - e576b7379537435d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.isFavorite.modify : Swift.Optional&lt;Swift.Bool&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "A20E2BD4-DAC7-4DD5-8B5A-19BA54A8BE06 - afce42709b87cc0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; tmbdAPI.DetailsViewController"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1376">
+               </Location>
+               <Location
+                  uuid = "A20E2BD4-DAC7-4DD5-8B5A-19BA54A8BE06 - 3a6acff4f467adf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;tmbdAPI.DetailsViewController&gt;"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1352">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

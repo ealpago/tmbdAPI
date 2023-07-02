@@ -73,6 +73,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
+        self.startLoading()
         print("login")
         if let email = email, let password = password {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -87,6 +88,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
                 }
             }
         }
+        self.stopLoading()
     }
 
     @IBAction func signUpButtonTapped(_ sender: UIButton) {

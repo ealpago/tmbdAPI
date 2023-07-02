@@ -21,6 +21,7 @@ class WatchLaterViewModel: BaseViewModel {
                 if let snapshotDoc = querySnapshot?.documents {
                     for doc in snapshotDoc {
                         print(doc.data())
+                        print(doc.documentID)
                         let data = doc.data()
 
                         if let owner = data[Constants.FirebaseDBMoviesConstants.favoriteListOwner] as? String, let movieID = data[Constants.FirebaseDBMoviesConstants.movieID] as? Int, let movieName = data[Constants.FirebaseDBMoviesConstants.movieName] as? String, let movieDescription = data[Constants.FirebaseDBMoviesConstants.movieDescription] as? String, let imagePath = data[Constants.FirebaseDBMoviesConstants.movieImage] as? String {
