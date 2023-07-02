@@ -20,10 +20,29 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
 
     override func setViewModel() {
         viewModel = ProfileViewModel()
+    }
+
+    func setupUI() {
+        userStackView.layer.cornerRadius = 8
+        userStackView.layer.borderColor = UIColor.brown.cgColor
+        userStackView.layer.borderWidth = 2
+
+        userMailLabel.text = UserDefaults.user
+
+        watchLaterButton.layer.cornerRadius = watchLaterButton.frame.height / 2
+        watchLaterButton.layer.borderColor = UIColor.brown.cgColor
+        watchLaterButton.layer.borderWidth = 2
+
+        favoritesButton.layer.cornerRadius = favoritesButton.frame.height / 2
+        favoritesButton.layer.borderColor = UIColor.brown.cgColor
+        favoritesButton.layer.borderWidth = 2
+
+        logoutButton.layer.cornerRadius = logoutButton.frame.height / 2
     }
 
     @IBAction func watchLaterButtonTapped(_ sender: UIButton) {

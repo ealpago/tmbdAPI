@@ -56,6 +56,7 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
             self.email = text
         }
         passwordView.registerSection = .password
+        passwordView.textField.isSecureTextEntry = true
         passwordView.textFieldDidEnd = { text in
             self.setButtonEnable()
             self.password = text
@@ -67,15 +68,39 @@ class SignUpViewController: BaseViewController<SignUpViewModel> {
     }
 
     func registerEmailAndPassword() {
-        if let email = email, let password = password, let name = name, let surname = surname {
+        if let email = email, let password = password {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error?.localizedDescription {
                     print(error)
+                    self.showAlert(title: "Uyarı", message: error, canSignUp: false)
                 } else {
                     print("Kayıt Başarılı")
+                    self.showAlert(title: "Kayıt Yapıldı", message: "Giriş ekranına yönlendiriliyorsunuz", canSignUp: true)
                 }
             }
         }
+    }
+
+    func showAlert(title: String?, message: String?, canSignUp: Bool?) {
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        // Create the actions
+        let errorAction = UIAlertAction(title: "OK", style: .default) {
+            UIAlertAction in
+            NSLog("error ok Pressed")
+        }
+        let doneAction = UIAlertAction(title: "OK", style: .default) {
+            UIAlertAction in
+            self.navigationController?.popToRootViewController(animated: true)
+            NSLog("done ok Pressed")
+        }
+
+        // Add the actions
+        canSignUp == true ? alertController.addAction(doneAction) : alertController.addAction(errorAction)
+
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
     }
 
     private func setButtonEnable() {
@@ -103,17 +128,6 @@ extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
-    }
-}
-
-//MARK: KEYBOARD PROTOCOL ÇALIŞMIYOR BAKILACAK
-extension SignUpViewController: KeyboardProtocol {
-    func keyboardWillShow(frame: CGRect) {
-        scrollView.contentInset.bottom = frame.size.height + 50
-    }
-
-    func keyboardWillHide() {
-        scrollView.contentInset = UIEdgeInsets.zero
     }
 }
 

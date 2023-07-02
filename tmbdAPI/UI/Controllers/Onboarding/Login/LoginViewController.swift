@@ -40,6 +40,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     private func setupUI() {
         emailView.loginSection = .email
         passwordView.loginSection = .password
+        passwordView.textField.isSecureTextEntry = true
         loginButton.layer.cornerRadius = 20
         setButtonEnable()
         emailView.textField.autocorrectionType = .no
