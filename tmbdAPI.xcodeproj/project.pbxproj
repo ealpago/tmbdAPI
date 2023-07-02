@@ -95,6 +95,8 @@
 		D11D5D1E2A50B47C00D4D194 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D1C2A50B47C00D4D194 /* CommentsTableViewCell.swift */; };
 		D11D5D1F2A50B47C00D4D194 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11D5D1D2A50B47C00D4D194 /* CommentsTableViewCell.xib */; };
 		D11D5D282A50E28800D4D194 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D11D5D272A50E28800D4D194 /* IQKeyboardManagerSwift */; };
+		D11D5D2B2A51B90E00D4D194 /* ToastMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D5D2A2A51B90E00D4D194 /* ToastMessageView.swift */; };
+		D11D5D2D2A51B91C00D4D194 /* ToastMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11D5D2C2A51B91C00D4D194 /* ToastMessageView.xib */; };
 		D14C36ED2A42FC6200F3554E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36EC2A42FC6200F3554E /* BaseViewController.swift */; };
 		D14C36F12A42FCCA00F3554E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */; };
 		D14C36F42A430D0300F3554E /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C36F32A430D0300F3554E /* CellModel.swift */; };
@@ -235,6 +237,8 @@
 		D11D5D192A508D3E00D4D194 /* CommentsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommentsStoryboard.storyboard; sourceTree = "<group>"; };
 		D11D5D1C2A50B47C00D4D194 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		D11D5D1D2A50B47C00D4D194 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
+		D11D5D2A2A51B90E00D4D194 /* ToastMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessageView.swift; sourceTree = "<group>"; };
+		D11D5D2C2A51B91C00D4D194 /* ToastMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastMessageView.xib; sourceTree = "<group>"; };
 		D14C36EC2A42FC6200F3554E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D14C36F02A42FCCA00F3554E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D14C36F32A430D0300F3554E /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -636,6 +640,15 @@
 			path = CommentsTableViewCell;
 			sourceTree = "<group>";
 		};
+		D11D5D292A51B8F500D4D194 /* ToastMessageView */ = {
+			isa = PBXGroup;
+			children = (
+				D11D5D2A2A51B90E00D4D194 /* ToastMessageView.swift */,
+				D11D5D2C2A51B91C00D4D194 /* ToastMessageView.xib */,
+			);
+			path = ToastMessageView;
+			sourceTree = "<group>";
+		};
 		D14C36EB2A42FC3E00F3554E /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,6 +700,7 @@
 		D17BC93B2A3912640071B9A2 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				D11D5D292A51B8F500D4D194 /* ToastMessageView */,
 				D11D5CD62A4DD44900D4D194 /* TextFieldView */,
 				D14C370B2A43ADB300F3554E /* DetailInfoView */,
 				D1F048722A3E10EC005D6965 /* HeaderView */,
@@ -1029,6 +1043,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11D5D2D2A51B91C00D4D194 /* ToastMessageView.xib in Resources */,
 				D1074DCC2A38FFDD00906579 /* UpcomingStoryboard.storyboard in Resources */,
 				D11D5CD52A4CE8DF00D4D194 /* SignUpStoryboard.storyboard in Resources */,
 				D11D5CF12A4F26D700D4D194 /* ActorDetailStoryboard.storyboard in Resources */,
@@ -1163,6 +1178,7 @@
 				D1F048AB2A410483005D6965 /* MovieKeywords.swift in Sources */,
 				D14C37262A44404100F3554E /* ServiceError.swift in Sources */,
 				D1F048992A4101FF005D6965 /* ProductionCompany.swift in Sources */,
+				D11D5D2B2A51B90E00D4D194 /* ToastMessageView.swift in Sources */,
 				D1F048B02A410592005D6965 /* MovieRecommendations.swift in Sources */,
 				D11D5CED2A4F26B000D4D194 /* ActorDetailViewController.swift in Sources */,
 				D1F048B32A410607005D6965 /* SimilarMovieResults.swift in Sources */,

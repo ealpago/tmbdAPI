@@ -90,6 +90,12 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
                 self.setDataToUI()
                 self.castCollectionView.reloadData()
                 self.recomendedCollectionView.reloadData()
+                self.viewModel.takeFavoritesFromFirestore(movieID: self.movieDetailID ?? 0) { isFavorite in
+                    self.isFavorite = isFavorite
+                }
+                self.viewModel.takeMovieListFromFirestore(movieID: self.movieDetailID ?? 0) { isList in
+                    self.isWatchList = isList
+                }
             }
         }
         viewModel.movieTapped = { id in
@@ -185,9 +191,6 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
                 }
             }
         }
-        viewModel.takeFavoritesFromFirestore(movieID: movieDetailID ?? 0) { isFavorite in
-            self.isFavorite = isFavorite
-        }
     }
 
     @IBAction func addWatchLaterButtonTapped(_ sender: UIButton) {
@@ -220,9 +223,6 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
                     }
                 }
             }
-        }
-        viewModel.takeMovieListFromFirestore(movieID: movieDetailID ?? 0) { isList in
-            self.isWatchList = isList
         }
     }
 
