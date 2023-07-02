@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Firebase
 
 class DetailViewModel: BaseViewModel {
+    let db = Firestore.firestore()
     var recommendedMovieTapped:(Int?)->() = {id in}
     var movieTapped:(Int?)->() = {id in}
     var reloadCollectionViewData:()->() = {}
@@ -16,6 +18,9 @@ class DetailViewModel: BaseViewModel {
     var recommendedMovies: [RecommendationResults] = []
     var recommendationMoviesModel:[CellModel] = []
     var recommendationMoviesModelItems:[CellModelItems] = []
+
+    var favMovie: DBMovies?
+    var watchLaterMovie: DBMovies?
 
     func takeData(movieID: Int) {
         self.delegate?.startLoading()
@@ -72,6 +77,44 @@ class DetailViewModel: BaseViewModel {
             completion()
         }
     }
+
+    func takeMovieListFromFirestore(movieID: Int, completion: @escaping(Bool?)->()) {
+        db.collection(Constants.FirebaseConstant.watchLaterMovies).whereField(Constants.FirebaseDBMoviesConstants.favoriteListOwner, isEqualTo: UserDefaults.user ?? "").whereField(Constants.FirebaseDBMoviesConstants.movieID, isEqualTo: movieID).addSnapshotListener { querySnapshot, error in
+            if let e = error {
+                print("Get Documents Has Error \(e)")
+            } else {
+                if let snapshotDoc = querySnapshot?.documents {
+                    if snapshotDoc.isEmpty {
+                       completion(true)
+                    } else {
+                        for document in snapshotDoc {
+                            print(document.data())
+                            completion(false)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    func takeFavoritesFromFirestore(movieID: Int, completion: @escaping(Bool?)->()) {
+        db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).whereField(Constants.FirebaseDBMoviesConstants.favoriteListOwner, isEqualTo: UserDefaults.user ?? "").whereField(Constants.FirebaseDBMoviesConstants.movieID, isEqualTo: movieID).addSnapshotListener { querySnapshot, error in
+            if let e = error {
+                print("Get Documents Has Error \(e)")
+            } else {
+                if let snapshotDoc = querySnapshot?.documents {
+                    if snapshotDoc.isEmpty {
+                       completion(true)
+                    } else {
+                        for document in snapshotDoc {
+                            print(document.data())
+                            completion(false)
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 extension DetailViewModel: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -84,7 +127,7 @@ extension DetailViewModel: UICollectionViewDelegate, UICollectionViewDataSource 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 0 {
             return movieCast?.cast?.count ?? 0
-            } else {
+        } else {
             return recommendedMovies.count
         }
     }

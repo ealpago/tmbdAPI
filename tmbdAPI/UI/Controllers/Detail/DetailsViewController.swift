@@ -37,12 +37,44 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     var movieDetailID: Int?
     var movieImagePath: String?
     let db = Firestore.firestore()
+    var isFavorite: Bool? {
+        didSet {
+            if let favorite = isFavorite {
+                if !favorite {
+                    favoriteButton.backgroundColor = UIColor.brown
+                    favoriteButton.tintColor = UIColor.white
+                } else {
+                    favoriteButton.backgroundColor = UIColor.clear
+                    favoriteButton.tintColor = UIColor.brown
+                }
+            }
+        }
+    }
+    var isWatchList: Bool? {
+        didSet {
+            if let watchlist = isWatchList {
+                if !watchlist {
+                    watchLaterButton.backgroundColor = UIColor.brown
+                    watchLaterButton.tintColor = UIColor.white
+                } else {
+                    watchLaterButton.backgroundColor = UIColor.clear
+                    watchLaterButton.tintColor = UIColor.brown
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitle(title: "Detaylar")
         setupUI()
         viewModel.takeData(movieID: movieDetailID ?? 0)
+        viewModel.takeFavoritesFromFirestore(movieID: movieDetailID ?? 0) { isFavorite in
+            self.isFavorite = isFavorite
+        }
+        viewModel.takeMovieListFromFirestore(movieID: movieDetailID ?? 0) { isList in
+            self.isWatchList = isList
+        }
         viewModel.setupCollectionView(with: castCollectionView)
         viewModel.setupCollectionView(with: recomendedCollectionView)
         viewModel.reloadCollectionViewData = {
