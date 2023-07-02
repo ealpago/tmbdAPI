@@ -15,7 +15,7 @@ class FavoritesViewModel: BaseViewModel {
     let db = Firestore.firestore()
 
     func takeFavoritesFromDB(completion: @escaping()->()) {
-        db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).getDocuments { querySnapshot, error in
+        db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).whereField(Constants.FirebaseDBMoviesConstants.favoriteListOwner, isEqualTo: UserDefaults.user ?? "").addSnapshotListener { querySnapshot, error in
             if let e = error {
                 print("Get Documents Has Error \(e)")
             } else {

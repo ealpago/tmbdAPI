@@ -14,7 +14,7 @@ class WatchLaterViewModel: BaseViewModel {
     let db = Firestore.firestore()
 
     func takeWatchListFromDB(completion: @escaping()->()) {
-        db.collection(Constants.FirebaseConstant.watchLaterMovies).getDocuments { querySnapshot, error in
+        db.collection(Constants.FirebaseConstant.watchLaterMovies).whereField(Constants.FirebaseDBMoviesConstants.favoriteListOwner, isEqualTo: UserDefaults.user ?? "").addSnapshotListener { querySnapshot, error in
             if let e = error {
                 print("Get Documents Has Error \(e)")
             } else {
