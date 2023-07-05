@@ -3,4 +3,182 @@
    uuid = "6779C058-5671-4B81-BDCD-45E1AC617AE5"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B2AFA3B-6128-4C57-A11C-9EE123F2151B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "addFavoriteButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7B2AFA3B-6128-4C57-A11C-9EE123F2151B - 2dc657f2ca5b535a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "7B2AFA3B-6128-4C57-A11C-9EE123F2151B - 2dc657f2ca5b535a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "016FEF40-E24A-4459-B87C-42CBBA1383D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "addFavoriteButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1D13DF4-4655-4145-B01C-4AD5EF9C4C22"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "addFavoriteButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16C2EFA5-91F3-44B4-84DD-61C14BB7A009"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "addFavoriteButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "16C2EFA5-91F3-44B4-84DD-61C14BB7A009 - 2dc657f2ca5b54ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "948">
+               </Location>
+               <Location
+                  uuid = "16C2EFA5-91F3-44B4-84DD-61C14BB7A009 - 72bff77323fb2766"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA79F14F-93AE-4277-B5AF-80C5500289D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "addFavoriteButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DA79F14F-93AE-4277-B5AF-80C5500289D0 - 2dc657f2ca5b53b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "DA79F14F-93AE-4277-B5AF-80C5500289D0 - 41aa2fc179b3fa59"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in tmbdAPI.DetailsViewController.addFavoriteButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "tmbdAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrealpago/I%CC%87OS%20Development/Personal%20Projects/tmbdAPI/tmbdAPI/UI/Controllers/Detail/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

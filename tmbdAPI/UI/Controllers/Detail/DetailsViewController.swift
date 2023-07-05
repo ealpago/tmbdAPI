@@ -163,7 +163,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     @IBAction func addFavoriteButtonTapped(_ sender: UIButton) {
         if let favorite = isFavorite {
             if !favorite {
-                if let id = viewModel.watchLaterDocumentID {
+                if let id = viewModel.favoriteDocumentID {
                     db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).document(id).delete() { err in
                         if let err = err {
                             print("Error removing document: \(err)")
