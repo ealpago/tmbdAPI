@@ -54,6 +54,15 @@ class ActorDetailViewController: BaseViewController<ActorDetailViewModel> {
             nameLabel.text = data.name
             actorDetailLabel.text = data.biography
             birthDayLabel.text = data.birthday ?? ""
+            if let gender = data.gender {
+                if gender == 1 {
+                    genderLabel.text = "female"
+                } else if gender == 2 {
+                    genderLabel.text = "male"
+                } else {
+                    genderLabel.text = ""
+                }
+            }
             if let country = data.placeOfBirth {
                 birthPlaceLabel.text = "\(country)"
             }

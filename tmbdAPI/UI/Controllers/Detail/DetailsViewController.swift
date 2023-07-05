@@ -98,7 +98,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
                 }
             }
         }
-        viewModel.movieTapped = { id in
+        viewModel.castTapped = { id in
             if let vc = "ActorDetailStoryboard".viewController(identifier: ActorDetailViewController.identifier) as? ActorDetailViewController {
                 vc.personID = id
                 self.navigationController?.pushViewController(vc, animated: true)

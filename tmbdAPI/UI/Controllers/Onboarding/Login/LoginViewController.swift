@@ -40,10 +40,11 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     private func setupUI() {
         emailView.loginSection = .email
         passwordView.loginSection = .password
-        passwordView.textField.isSecureTextEntry = true
         loginButton.layer.cornerRadius = 20
         setButtonEnable()
         emailView.textField.autocorrectionType = .no
+        passwordView.textField.isSecureTextEntry = true
+
         emailView.textFieldDidEnd = { text in
             self.email = text
             self.setButtonEnable()
@@ -80,6 +81,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let error = error {
                     print(error.localizedDescription)
+                    self.showAlert(title: "Uyarı", message: error.localizedDescription)
                 } else {
                     if let vc = "BaseTabbarStoryboard".viewController(identifier: BaseTabBarController.identifier) as? BaseTabBarController {
                         UserDefaults.user = email
@@ -90,6 +92,23 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             }
         }
         self.stopLoading()
+    }
+
+    func showAlert(title: String?, message: String?) {
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        // Create the actions
+        let errorAction = UIAlertAction(title: "OK", style: .default) {
+            UIAlertAction in
+            NSLog("error ok Pressed")
+        }
+
+        // Add the actions
+        alertController.addAction(errorAction)
+
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
     }
 
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
