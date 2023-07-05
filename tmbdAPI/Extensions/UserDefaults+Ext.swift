@@ -10,6 +10,7 @@ import Foundation
 enum UserDefaultsKeys: String {
     case loggedUser = "loggedUser"
     case user = "user"
+    case password = "password"
 }
 
 extension UserDefaults {
