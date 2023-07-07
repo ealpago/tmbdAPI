@@ -40,7 +40,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
     var isFavorite: Bool? {
         didSet {
             if let favorite = isFavorite {
-                if !favorite {
+                if favorite == true {
                     favoriteButton.backgroundColor = UIColor.brown
                     favoriteButton.tintColor = UIColor.white
                 } else {
@@ -86,7 +86,8 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
         }
         viewModel.recommendedMovieTapped = { id in
             DispatchQueue.main.async {
-                self.viewModel.takeData(movieID: id ?? 0)
+                self.movieDetailID = id
+                self.viewModel.takeData(movieID: self.movieDetailID ?? 0)
                 self.setDataToUI()
                 self.castCollectionView.reloadData()
                 self.recomendedCollectionView.reloadData()
@@ -162,7 +163,7 @@ class DetailsViewController: BaseViewController<DetailViewModel> {
 
     @IBAction func addFavoriteButtonTapped(_ sender: UIButton) {
         if let favorite = isFavorite {
-            if !favorite {
+            if favorite {
                 if let id = viewModel.favoriteDocumentID {
                     db.collection(Constants.FirebaseConstant.favoriteMoviesCollection).document(id).delete() { err in
                         if let err = err {

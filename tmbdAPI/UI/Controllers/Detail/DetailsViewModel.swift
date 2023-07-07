@@ -108,13 +108,13 @@ class DetailViewModel: BaseViewModel {
             } else {
                 if let snapshotDoc = querySnapshot?.documents {
                     if snapshotDoc.isEmpty {
-                       completion(true)
+                       completion(false)
                     } else {
                         for document in snapshotDoc {
                             print(document.data())
                             print(document.documentID)
                             self.favoriteDocumentID = document.documentID
-                            completion(false)
+                            completion(true)
                         }
                     }
                 }
